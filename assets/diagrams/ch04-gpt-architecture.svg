@@ -7,10 +7,11 @@
   </defs>
 
   <!-- bottom: tokenized text -->
-  <rect class="d-node" x="270" y="500" width="220" height="44" rx="11"/>
-  <text class="d-c d-bold d-s" x="380" y="527">Tokenized text  "Every effort moves you"</text>
+  <rect class="d-node" x="270" y="494" width="220" height="50" rx="11"/>
+  <text class="d-c d-bold d-s" x="380" y="514">Tokenized text</text>
+  <text class="d-c d-tmut d-xs" x="380" y="531">"Every effort moves you"</text>
 
-  <line class="d-line" x1="380" y1="500" x2="380" y2="476" marker-end="url(#ar-c4ar)"/>
+  <line class="d-line" x1="380" y1="494" x2="380" y2="476" marker-end="url(#ar-c4ar)"/>
 
   <!-- embeddings: token + positional, side by side merging -->
   <rect class="d-soft" x="190" y="430" width="170" height="44" rx="11"/>

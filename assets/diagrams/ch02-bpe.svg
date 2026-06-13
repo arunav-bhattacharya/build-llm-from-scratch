@@ -16,7 +16,7 @@
     <rect class="d-node" x="227" y="104" width="64" height="36" rx="8"/><text class="d-c" x="259" y="127">w</text>
     <rect class="d-node" x="309" y="104" width="64" height="36" rx="8"/><text class="d-c" x="341" y="127">ir</text>
     <rect class="d-node" x="391" y="104" width="64" height="36" rx="8"/><text class="d-c" x="423" y="127">w</text>
-    <rect class="d-node" x="473" y="104" width="64" height="36" rx="8"/><text class="d-c" x="505" y="127">(space)</text>
+    <rect class="d-node" x="473" y="104" width="64" height="36" rx="8"/><text class="d-c" x="505" y="127">space</text>
     <rect class="d-node" x="555" y="104" width="64" height="36" rx="8"/><text class="d-c" x="587" y="127">ier</text>
   </g>
 

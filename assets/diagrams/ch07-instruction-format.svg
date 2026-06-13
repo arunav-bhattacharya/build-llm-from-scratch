@@ -21,7 +21,7 @@
 
   <!-- arrow + label -->
   <line class="d-line-accent" x1="276" y1="131" x2="340" y2="131" marker-end="url(#ar-c7a)"/>
-  <rect class="d-chip" x="286" y="98" width="48" height="22" rx="11"/><text class="d-c d-xs d-tac" x="310" y="113">format</text>
+  <rect class="d-chip" x="277" y="98" width="66" height="22" rx="11"/><text class="d-c d-xs d-tac" x="310" y="113">format</text>
 
   <!-- alpaca template -->
   <text class="d-c d-tmut d-xs" x="552" y="34">Alpaca-style prompt string</text>

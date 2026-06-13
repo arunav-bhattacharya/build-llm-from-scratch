@@ -28,12 +28,12 @@
   <text class="d-c d-bold d-s" x="540" y="110">(2 epochs)</text>
   <text class="d-c d-tmut d-xs" x="540" y="148">supervised, next-token loss</text>
 
-  <line class="d-line-accent" x1="600" y1="98" x2="654" y2="98" marker-end="url(#ar-c7c2)"/>
+  <line class="d-line-accent" x1="600" y1="98" x2="632" y2="98" marker-end="url(#ar-c7c2)"/>
 
   <!-- result -->
-  <rect class="d-fill-accent" x="656" y="64" width="80" height="68" rx="12"/>
-  <text class="d-c d-tinv d-bold d-s" x="696" y="92">follows</text>
-  <text class="d-c d-tinv d-bold d-s" x="696" y="110">instructions</text>
+  <rect class="d-fill-accent" x="634" y="64" width="106" height="68" rx="12"/>
+  <text class="d-c d-tinv d-bold d-s" x="687" y="92">follows</text>
+  <text class="d-c d-tinv d-bold d-s" x="687" y="110">instructions</text>
 
   <text class="d-c d-tmut d-xs" x="380" y="38">A capable text completer learns good "manners": doing what each instruction asks.</text>
 </svg>

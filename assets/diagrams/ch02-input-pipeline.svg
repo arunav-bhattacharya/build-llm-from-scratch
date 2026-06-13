@@ -8,9 +8,9 @@
   <!-- top: text -> tokens -> ids -->
   <g font-size="12.5">
     <rect class="d-node" x="40" y="30" width="160" height="40" rx="9"/><text class="d-c" x="120" y="55">"This is an example"</text>
-    <line class="d-line" x1="200" y1="50" x2="236" y2="50" marker-end="url(#ar-ip)"/>
-    <rect class="d-node" x="238" y="30" width="180" height="40" rx="9"/><text class="d-c" x="328" y="55">This · is · an · example</text>
-    <line class="d-line" x1="418" y1="50" x2="454" y2="50" marker-end="url(#ar-ip)"/>
+    <line class="d-line" x1="200" y1="50" x2="220" y2="50" marker-end="url(#ar-ip)"/>
+    <rect class="d-node" x="222" y="30" width="200" height="40" rx="9"/><text class="d-c" x="322" y="55">This · is · an · example</text>
+    <line class="d-line" x1="424" y1="50" x2="454" y2="50" marker-end="url(#ar-ip)"/>
     <rect class="d-node" x="456" y="30" width="200" height="40" rx="9"/><text class="d-c" x="556" y="55">40134 2052 133 389</text>
   </g>
 

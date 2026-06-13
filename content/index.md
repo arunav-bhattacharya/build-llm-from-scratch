@@ -8,6 +8,17 @@
   </div>
 </section>
 
+<h2 class="home-h2">Browse the book</h2>
+<p class="home-sub">Jump into any chapter or appendix. Each is colour-coded by its build stage.</p>
+
+<!--SECTION_GRID-->
+
+<h2 class="home-h2">The journey: three stages</h2>
+<p class="home-sub">We take the core idea behind GPT as a blueprint and build it up in three stages.</p>
+
+::: diagram ch01-three-stages "From an untrained architecture to a fine-tuned assistant — the path this book (and this site) follows."
+:::
+
 <h2 class="home-h2">What's inside every chapter</h2>
 <p class="home-sub">Each chapter is rebuilt as a self-contained lesson — read it, see it, then test yourself.</p>
 <div class="feature-grid">
@@ -32,17 +43,6 @@
     <p>Flashcards, interactive quizzes, and hands-on assignments at the end of every chapter.</p>
   </div>
 </div>
-
-<h2 class="home-h2">The journey: three stages</h2>
-<p class="home-sub">We take the core idea behind GPT as a blueprint and build it up in three stages.</p>
-
-::: diagram ch01-three-stages "From an untrained architecture to a fine-tuned assistant — the path this book (and this site) follows."
-:::
-
-<h2 class="home-h2">Browse the book</h2>
-<p class="home-sub">Jump into any chapter or appendix. Each is colour-coded by its build stage.</p>
-
-<!--SECTION_GRID-->
 
 ::: callout note "About this companion"
 This is a free, **unofficial** study companion. The explanations are original; the code examples are adapted from Sebastian Raschka's open-source [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) repository. If you find it useful, please [buy the book](https://www.manning.com/books/build-a-large-language-model-from-scratch) to support the author.

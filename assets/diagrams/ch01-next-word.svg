@@ -28,6 +28,6 @@
   <line class="d-line-accent" x1="528" y1="96" x2="576" y2="96" marker-end="url(#ar-nwa)"/>
 
   <path class="d-dash" d="M640 120 L640 230 L174 230 L174 136" marker-end="url(#ar-nw)"/>
-  <rect class="d-chip" x="222" y="216" width="316" height="28" rx="14"/>
+  <rect class="d-chip" x="193" y="215" width="374" height="30" rx="15"/>
   <text class="d-c d-tmut d-xs" x="380" y="234">append the word, then repeat — autoregression</text>
 </svg>

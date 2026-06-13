@@ -24,9 +24,9 @@
   <rect class="d-panel" x="512" y="60" width="220" height="200" rx="14"/>
   <text class="d-c d-bold d-s" x="622" y="86">our GPTModel</text>
   <text class="d-c d-tmut d-xs" x="622" y="104">random → pretrained</text>
-  <rect class="d-node" x="532" y="116" width="180" height="30" rx="8"/><text class="d-c d-s" x="622" y="136">tok_emb · pos_emb</text>
-  <rect class="d-node" x="532" y="152" width="180" height="30" rx="8"/><text class="d-c d-s" x="622" y="172">trf_blocks[b].att · ff</text>
-  <rect class="d-node" x="532" y="188" width="180" height="30" rx="8"/><text class="d-c d-s" x="622" y="208">norm1 · norm2 · final_norm</text>
+  <rect class="d-node" x="522" y="116" width="200" height="30" rx="8"/><text class="d-c d-s" x="622" y="136">tok_emb · pos_emb</text>
+  <rect class="d-node" x="522" y="152" width="200" height="30" rx="8"/><text class="d-c d-s" x="622" y="172">trf_blocks[b].att · ff</text>
+  <rect class="d-node" x="522" y="188" width="200" height="30" rx="8"/><text class="d-c d-s" x="622" y="208">norm1 · norm2 · final_norm</text>
   <text class="d-c d-tmut d-xs" x="622" y="240">our naming</text>
 
   <text class="d-c d-tmut d-xs" x="380" y="284">a shape mismatch raises an error — so a wiring mistake is caught immediately</text>

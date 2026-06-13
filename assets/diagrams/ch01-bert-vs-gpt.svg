@@ -9,13 +9,13 @@
   <text class="d-c d-bold" x="193" y="58" font-size="16">BERT · Encoder</text>
   <text class="d-c d-tmut d-xs" x="193" y="77">sees the whole sentence at once</text>
 
-  <rect class="d-node" x="46" y="98" width="294" height="42" rx="10"/>
+  <rect class="d-node" x="39" y="98" width="308" height="42" rx="10"/>
   <text class="d-c d-s" x="193" y="124">This is an ___ of how concise I ___ be</text>
 
   <line class="d-line" x1="193" y1="140" x2="193" y2="180" marker-end="url(#ar-bg)"/>
   <text class="d-c d-tmut d-xs" x="193" y="170">fills in the masked words</text>
 
-  <rect class="d-node" x="46" y="188" width="294" height="42" rx="10"/>
+  <rect class="d-node" x="39" y="188" width="308" height="42" rx="10"/>
   <text class="d-c d-s" x="193" y="214">This is an example of how concise I can be</text>
 
   <rect class="d-fill-blue" x="58" y="266" width="270" height="42" rx="12"/>
@@ -26,13 +26,13 @@
   <text class="d-c d-tac d-bold" x="567" y="58" font-size="16">GPT · Decoder</text>
   <text class="d-c d-tmut d-xs" x="567" y="77">sees only what came before</text>
 
-  <rect class="d-node" x="418" y="98" width="298" height="42" rx="10"/>
+  <rect class="d-node" x="412" y="98" width="310" height="42" rx="10"/>
   <text class="d-c d-s" x="567" y="124">This is an example of how concise I can</text>
 
   <line class="d-line" x1="567" y1="140" x2="567" y2="180" marker-end="url(#ar-bg)"/>
   <text class="d-c d-tmut d-xs" x="567" y="170">predicts the next word</text>
 
-  <rect class="d-node" x="418" y="188" width="298" height="42" rx="10"/>
+  <rect class="d-node" x="412" y="188" width="310" height="42" rx="10"/>
   <text class="d-c d-s" x="567" y="214">… can <tspan class="d-tac d-bold">be</tspan>  ← next word</text>
 
   <rect class="d-fill-soft" x="432" y="266" width="270" height="42" rx="12"/>

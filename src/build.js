@@ -146,6 +146,9 @@ async function build() {
       continue;
     }
     const env = { toc: [], counter: {} };
+    // Figure numbering prefix: chapter number ("2" -> Figure 2.1) or appendix
+    // letter ("A" -> Figure A.1); null on the home page to suppress numbering.
+    env.figPrefix = section.group === 'home' ? null : section.num || section.letter || '';
     const parsed = matter(fs.readFileSync(file, 'utf8'));
     let bodyHtml = md.render(parsed.content, env);
     if (section.group === 'home') bodyHtml = bodyHtml.replace('<!--SECTION_GRID-->', sectionGridHtml(sections, meta.categories));

@@ -23,7 +23,7 @@
   <rect class="d-fill-accent" x="218" y="184" width="96" height="50" rx="11"/><text class="d-c d-tinv d-bold d-s" x="266" y="206">A</text><text class="d-c d-tinv d-xs" x="266" y="224">d × r</text>
   <line class="d-line-accent" x1="314" y1="209" x2="350" y2="209" marker-end="url(#ar-aEb)"/>
   <rect class="d-fill-accent" x="352" y="184" width="96" height="50" rx="11"/><text class="d-c d-tinv d-bold d-s" x="400" y="206">B</text><text class="d-c d-tinv d-xs" x="400" y="224">r × k</text>
-  <rect class="d-chip" x="248" y="252" width="170" height="22" rx="11"/><text class="d-c d-tac d-xs" x="333" y="267">LoRA branch · trainable 🔥</text>
+  <rect class="d-chip" x="233" y="252" width="200" height="22" rx="11"/><text class="d-c d-tac d-xs" x="333" y="267">LoRA branch · trainable 🔥</text>
 
   <!-- merge arrows to sum -->
   <line class="d-line" x1="428" y1="99" x2="540" y2="140" marker-end="url(#ar-aEb)"/>

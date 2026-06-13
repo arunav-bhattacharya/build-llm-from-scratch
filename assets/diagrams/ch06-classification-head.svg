@@ -9,24 +9,24 @@
 
   <!-- stack, bottom (input) to top (output) -->
   <!-- frozen: token + pos embeddings -->
-  <rect class="d-node-2" x="148" y="338" width="200" height="44" rx="10"/>
+  <rect class="d-node-2" x="128" y="338" width="240" height="44" rx="10"/>
   <text class="d-c d-s" x="248" y="365">&#10052; token + positional embeddings</text>
 
   <!-- frozen: 11 transformer blocks -->
-  <rect class="d-node-2" x="148" y="280" width="200" height="44" rx="10"/>
+  <rect class="d-node-2" x="128" y="280" width="240" height="44" rx="10"/>
   <text class="d-c d-s" x="248" y="301">&#10052; transformer blocks 1&#8211;11</text>
   <text class="d-c d-tmut d-xs" x="248" y="317">frozen &#183; keep pretrained knowledge</text>
 
   <!-- trainable: last transformer block -->
-  <rect class="d-soft" x="148" y="222" width="200" height="44" rx="10"/>
+  <rect class="d-soft" x="128" y="222" width="240" height="44" rx="10"/>
   <text class="d-c d-tac d-s" x="248" y="249">&#128293; transformer block 12</text>
 
   <!-- trainable: final layernorm -->
-  <rect class="d-soft" x="148" y="164" width="200" height="40" rx="10"/>
+  <rect class="d-soft" x="128" y="164" width="240" height="40" rx="10"/>
   <text class="d-c d-tac d-s" x="248" y="189">&#128293; final LayerNorm</text>
 
   <!-- trainable: new head -->
-  <rect class="d-fill-accent" x="148" y="92" width="200" height="54" rx="11"/>
+  <rect class="d-fill-accent" x="128" y="92" width="240" height="54" rx="11"/>
   <text class="d-c d-tinv d-bold d-s" x="248" y="116">&#128293; Linear(768 &#8594; 2)</text>
   <text class="d-c d-tinv d-xs" x="248" y="134">new classification head</text>
 
@@ -42,7 +42,7 @@
   <rect class="d-node" x="430" y="92" width="222" height="54" rx="11" opacity="0.55"/>
   <text class="d-c d-s" x="541" y="114" opacity="0.8">old: Linear(768 &#8594; 50257)</text>
   <text class="d-c d-tmut d-xs" x="541" y="132">removed &#8212; vocabulary head</text>
-  <line class="d-dash" x1="430" y1="119" x2="350" y2="119" marker-end="url(#ar-c6b)"/>
+  <line class="d-dash" x1="430" y1="119" x2="372" y2="119" marker-end="url(#ar-c6b)"/>
   <text class="d-c d-tmut d-xs" x="541" y="166">swapped for the 2-class head</text>
 
   <!-- legend -->

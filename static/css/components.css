@@ -94,6 +94,7 @@
   background: var(--svg-tray); box-shadow: var(--sh-sm), inset 0 1px 3px var(--shadow-svg); display: flex; justify-content: center; }
 .diagram__frame svg { width: 100%; height: auto; display: block; }
 .diagram figcaption { margin-top: 12px; font-size: .86rem; color: var(--mut); text-align: center; line-height: 1.5; padding: 0 8px; }
+.diagram__fignum { font-weight: 650; color: var(--accent); }
 .diagram--missing .diagram__frame { color: var(--c-coral); font-family: var(--font-mono); font-size: .85rem; }
 
 /* shared classes used inside hand-authored SVG diagrams (theme-aware + 3D).

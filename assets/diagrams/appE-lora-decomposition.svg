@@ -33,7 +33,7 @@
   <text class="d-c d-tmut d-xs" x="427" y="244">r × k</text>
 
   <!-- trainable callout for A,B -->
-  <rect class="d-chip" x="300" y="262" width="164" height="22" rx="11"/><text class="d-c d-tac d-xs" x="382" y="277">trainable 🔥 · small rank r</text>
+  <rect class="d-chip" x="287" y="262" width="190" height="22" rx="11"/><text class="d-c d-tac d-xs" x="382" y="277">trainable 🔥 · small rank r</text>
 
   <!-- equals / arrow to updated W -->
   <line class="d-line-accent" x1="520" y1="147" x2="566" y2="147" marker-end="url(#ar-aEa)"/>
