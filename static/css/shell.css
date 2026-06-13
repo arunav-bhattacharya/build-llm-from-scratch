@@ -134,8 +134,8 @@
 .kicker__stage { font-size: .8rem; color: var(--mut); }
 .ico-clock { width: 13px; height: 13px; flex: none; }
 /* pink meta line under the chapter title: read time + practice-material counts */
-.page-stats { display: flex; flex-wrap: wrap; align-items: center; gap: 9px 20px; margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--accent); font-size: .86rem; font-weight: 550; }
-.page-stats__item { display: inline-flex; align-items: center; gap: 7px; }
+.page-stats { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin-top: 16px; color: var(--accent); font-size: .9rem; font-weight: 550; }
+.page-stats__item { display: inline-flex; align-items: center; gap: 8px; }
 .page-stats__item svg { width: 15px; height: 15px; flex: none; }
 .page-title { font-size: clamp(1.9rem, 4.4vw, 2.7rem); font-weight: 680; letter-spacing: -.022em; line-height: 1.12; color: var(--txt-strong); }
 .page-lede { font-size: 1.12rem; color: var(--mut); margin-top: .6em; line-height: 1.55; }
