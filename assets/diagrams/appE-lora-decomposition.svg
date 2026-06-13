@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-aEd d-aEd">
+  <title id="t-aEd">LoRA low-rank decomposition of the weight update</title>
+  <desc id="d-aEd">Regular fine-tuning updates the full d-by-k weight matrix W with a same-sized update delta-W. LoRA freezes W and approximates the update as the product of two skinny matrices A (d-by-r) and B (r-by-k), where the inner rank r is small. Only A and B are trainable.</desc>
+  <defs>
+    <marker id="ar-aEa" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="380" y="34">W stays frozen; the small update ΔW is approximated by A · B</text>
+
+  <!-- Frozen W -->
+  <rect class="d-node-2" x="48" y="72" width="150" height="150" rx="10"/>
+  <text class="d-c d-bold" x="123" y="142">W</text>
+  <text class="d-c d-tmut d-xs" x="123" y="162">d × k · frozen ❄</text>
+  <text class="d-c d-tmut d-xs" x="123" y="244">pretrained weights</text>
+
+  <!-- plus -->
+  <text class="d-c d-bold" x="228" y="152">+</text>
+
+  <!-- ΔW approximated -->
+  <text class="d-c d-tmut d-xs" x="330" y="60">ΔW ≈ A · B</text>
+
+  <!-- A: tall and skinny (d x r) -->
+  <rect class="d-fill-accent" x="262" y="72" width="46" height="150" rx="8"/>
+  <text class="d-c d-tinv d-bold" x="285" y="152">A</text>
+  <text class="d-c d-tmut d-xs" x="285" y="244">d × r</text>
+
+  <!-- multiply -->
+  <text class="d-c d-bold" x="330" y="152">×</text>
+
+  <!-- B: wide and short (r x k) -->
+  <rect class="d-fill-accent" x="352" y="124" width="150" height="46" rx="8"/>
+  <text class="d-c d-tinv d-bold" x="427" y="152">B</text>
+  <text class="d-c d-tmut d-xs" x="427" y="244">r × k</text>
+
+  <!-- trainable callout for A,B -->
+  <rect class="d-chip" x="300" y="262" width="164" height="22" rx="11"/><text class="d-c d-tac d-xs" x="382" y="277">trainable 🔥 · small rank r</text>
+
+  <!-- equals / arrow to updated W -->
+  <line class="d-line-accent" x1="520" y1="147" x2="566" y2="147" marker-end="url(#ar-aEa)"/>
+
+  <!-- W_updated -->
+  <rect class="d-soft" x="570" y="72" width="160" height="150" rx="10"/>
+  <text class="d-c d-tac d-bold d-s" x="650" y="142">W + AB</text>
+  <text class="d-c d-tmut d-xs" x="650" y="162">updated weights</text>
+  <text class="d-c d-tmut d-xs" x="650" y="244">used at inference</text>
+</svg>

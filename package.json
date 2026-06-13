@@ -1,0 +1,23 @@
+{
+  "name": "build-llm-from-scratch-companion",
+  "version": "1.0.0",
+  "description": "An interactive, beginner-friendly study companion for Sebastian Raschka's 'Build a Large Language Model (From Scratch)'.",
+  "type": "commonjs",
+  "private": true,
+  "scripts": {
+    "build": "node src/build.js",
+    "serve": "node src/serve.js",
+    "dev": "node src/build.js && node src/serve.js",
+    "clean": "rm -rf dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "katex": "^0.16.11",
+    "markdown-it": "^14.1.0",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-texmath": "^1.0.0",
+    "minisearch": "^7.2.0",
+    "shiki": "^1.24.0"
+  }
+}

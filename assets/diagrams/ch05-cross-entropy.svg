@@ -1,0 +1,32 @@
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-ce d-ce">
+  <title id="t-ce">Cross-entropy loss, step by step</title>
+  <desc id="d-ce">Logits are softmaxed into probabilities; the probabilities at the target token positions are picked out, log-transformed, averaged, and negated to give the loss.</desc>
+  <defs>
+    <marker id="ar-c5ce" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c5ce2" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-node" x="24" y="92" width="104" height="44" rx="10"/><text class="d-c d-bold" x="76" y="119">logits</text>
+  <text class="d-c d-tmut d-xs" x="76" y="82">raw scores</text>
+
+  <line class="d-line" x1="128" y1="114" x2="168" y2="114" marker-end="url(#ar-c5ce)"/>
+  <rect class="d-node" x="170" y="92" width="104" height="44" rx="10"/><text class="d-c d-bold" x="222" y="119">softmax</text>
+  <text class="d-c d-tmut d-xs" x="222" y="82">→ probabilities</text>
+
+  <line class="d-line" x1="274" y1="114" x2="314" y2="114" marker-end="url(#ar-c5ce)"/>
+  <rect class="d-soft" x="316" y="84" width="150" height="60" rx="10"/><text class="d-c d-tac d-bold d-s" x="391" y="108">pick target-token</text><text class="d-c d-tac d-bold d-s" x="391" y="126">probabilities</text>
+  <text class="d-c d-tmut d-xs" x="391" y="74">how sure of the right word?</text>
+
+  <line class="d-line" x1="466" y1="114" x2="506" y2="114" marker-end="url(#ar-c5ce)"/>
+  <rect class="d-node" x="508" y="92" width="96" height="44" rx="10"/><text class="d-c d-bold" x="556" y="119">− log</text>
+  <text class="d-c d-tmut d-xs" x="556" y="82">surprise</text>
+
+  <line class="d-line" x1="604" y1="114" x2="644" y2="114" marker-end="url(#ar-c5ce)"/>
+  <rect class="d-node" x="646" y="92" width="92" height="44" rx="10"/><text class="d-c d-bold" x="692" y="119">average</text>
+  <text class="d-c d-tmut d-xs" x="692" y="82">over tokens</text>
+
+  <line class="d-line-accent" x1="391" y1="144" x2="391" y2="182" marker-end="url(#ar-c5ce2)"/>
+  <rect class="d-fill-accent" x="300" y="184" width="182" height="42" rx="10"/><text class="d-c d-tinv d-bold" x="391" y="210">cross-entropy loss</text>
+
+  <text class="d-c d-tmut d-xs" x="640" y="206">lower = less surprised</text>
+</svg>

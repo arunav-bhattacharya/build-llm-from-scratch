@@ -1,0 +1,36 @@
+<svg viewBox="0 0 760 286" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-pf d-pf">
+  <title id="t-pf">Pretraining then fine-tuning</title>
+  <desc id="d-pf">Raw unlabeled text is used to pretrain a foundation model, which is then fine-tuned on labeled data into a task-specific LLM.</desc>
+  <defs>
+    <marker id="ar-pf" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-node" x="22" y="52" width="186" height="182" rx="14"/>
+  <text class="d-c d-bold" x="115" y="84" font-size="14">Raw text</text>
+  <text class="d-c d-tmut d-xs" x="115" y="103">unlabeled · trillions of words</text>
+  <text class="d-t d-s" x="44" y="140">• Web pages</text>
+  <text class="d-t d-s" x="44" y="166">• Books &amp; Wikipedia</text>
+  <text class="d-t d-s" x="44" y="192">• Research articles</text>
+
+  <rect class="d-node" x="287" y="52" width="186" height="182" rx="14"/>
+  <text class="d-c d-bold" x="380" y="84" font-size="14">Foundation model</text>
+  <text class="d-c d-tmut d-xs" x="380" y="103">pretrained · general</text>
+  <text class="d-t d-s" x="309" y="140">• Text completion</text>
+  <text class="d-t d-s" x="309" y="166">• Few-shot ability</text>
+  <text class="d-t d-s" x="309" y="192">• Broad knowledge</text>
+
+  <rect class="d-node" x="552" y="52" width="186" height="182" rx="14"/>
+  <text class="d-c d-bold" x="645" y="84" font-size="14">Fine-tuned LLM</text>
+  <text class="d-c d-tmut d-xs" x="645" y="103">specialized for a task</text>
+  <text class="d-t d-s" x="574" y="140">• Spam classifier</text>
+  <text class="d-t d-s" x="574" y="166">• Summarizer</text>
+  <text class="d-t d-s" x="574" y="192">• Assistant / chat</text>
+
+  <text class="d-c d-tac d-s d-bold" x="247" y="132">Pretrain</text>
+  <line class="d-line-accent" x1="212" y1="150" x2="281" y2="150" marker-end="url(#ar-pf)"/>
+  <text class="d-c d-tmut d-xs" x="247" y="174">unlabeled</text>
+
+  <text class="d-c d-tac d-s d-bold" x="512" y="132">Fine-tune</text>
+  <line class="d-line-accent" x1="477" y1="150" x2="546" y2="150" marker-end="url(#ar-pf)"/>
+  <text class="d-c d-tmut d-xs" x="512" y="174">labeled data</text>
+</svg>

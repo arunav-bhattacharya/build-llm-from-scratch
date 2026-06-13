@@ -1,0 +1,40 @@
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-aDgc d-aDgc">
+  <title id="t-aDgc">Gradient clipping by norm</title>
+  <desc id="d-aDgc">A gradient whose L2 norm spikes far past a maximum-norm threshold is uniformly rescaled so its norm equals exactly the threshold. The direction is preserved; only the magnitude is reduced.</desc>
+  <defs>
+    <marker id="ar-aDb" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-aDb-ac" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="380" y="40">a single oversized gradient is capped to the max-norm threshold</text>
+
+  <!-- LEFT panel: before -->
+  <rect class="d-panel" x="48" y="64" width="280" height="220" rx="14"/>
+  <text class="d-c d-bold d-s" x="188" y="92">before clipping</text>
+
+  <!-- threshold circle (radius = max_norm) -->
+  <circle class="d-dash" cx="160" cy="190" r="58" fill="none"/>
+  <text class="d-e d-tmut d-xs" x="92" y="135">‖g‖₂ = 5</text>
+
+  <!-- big gradient arrow shooting past the circle -->
+  <line class="d-line-accent" x1="160" y1="190" x2="284" y2="128" marker-end="url(#ar-aDb-ac)"/>
+  <circle class="d-node" cx="160" cy="190" r="5"/>
+  <rect class="d-chip" x="118" y="250" width="120" height="22" rx="11"/><text class="d-c d-tac d-xs" x="178" y="265">max_norm = 1</text>
+
+  <!-- arrow between panels -->
+  <line class="d-line" x1="336" y1="174" x2="412" y2="174" marker-end="url(#ar-aDb)"/>
+  <rect class="d-chip" x="338" y="138" width="72" height="22" rx="11"/><text class="d-c d-tac d-xs" x="374" y="153">× 1/5</text>
+
+  <!-- RIGHT panel: after -->
+  <rect class="d-panel" x="420" y="64" width="290" height="220" rx="14"/>
+  <text class="d-c d-bold d-s" x="565" y="92">after clipping</text>
+
+  <circle class="d-dash" cx="540" cy="190" r="58" fill="none"/>
+  <!-- clipped gradient: same direction, length = radius -->
+  <line class="d-line-accent" x1="540" y1="190" x2="589" y2="166" marker-end="url(#ar-aDb-ac)"/>
+  <circle class="d-node" cx="540" cy="190" r="5"/>
+  <text class="d-e d-tmut d-xs" x="600" y="150">‖g′‖₂ = 1</text>
+  <text class="d-c d-tmut d-xs" x="565" y="265">same direction, capped length</text>
+
+  <text class="d-c d-tmut d-xs" x="380" y="316">scale factor = max_norm / ‖g‖₂  →  direction kept, magnitude clipped</text>
+</svg>

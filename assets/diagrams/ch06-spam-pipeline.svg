@@ -1,0 +1,31 @@
+<svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-sp d-sp">
+  <title id="t-sp">The spam-classification pipeline at inference</title>
+  <desc id="d-sp">A raw SMS message is tokenized and padded to a fixed length, passed through the fine-tuned GPT model, and the last token's logits are turned into a spam or not-spam label.</desc>
+  <defs>
+    <marker id="ar-c6d" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <rect class="d-node" x="24" y="78" width="150" height="64" rx="12"/>
+  <text class="d-c d-bold d-s" x="99" y="105">raw SMS text</text>
+  <text class="d-c d-tmut d-xs" x="99" y="126">&#8220;You are a winner&#8230;&#8221;</text>
+
+  <line class="d-line" x1="174" y1="110" x2="214" y2="110" marker-end="url(#ar-c6d)"/>
+
+  <rect class="d-soft" x="216" y="78" width="156" height="64" rx="12"/>
+  <text class="d-c d-tac d-bold d-s" x="294" y="105">tokenize + pad</text>
+  <text class="d-c d-tmut d-xs" x="294" y="126">token IDs, len 120</text>
+
+  <line class="d-line" x1="372" y1="110" x2="412" y2="110" marker-end="url(#ar-c6d)"/>
+
+  <rect class="d-fill-accent" x="414" y="78" width="156" height="64" rx="12"/>
+  <text class="d-c d-tinv d-bold d-s" x="492" y="105">fine-tuned</text>
+  <text class="d-c d-tinv d-bold d-s" x="492" y="124">GPT model</text>
+
+  <line class="d-line-accent" x1="570" y1="110" x2="610" y2="110" marker-end="url(#ar-c6d)"/>
+
+  <rect class="d-node" x="612" y="78" width="124" height="64" rx="12"/>
+  <text class="d-c d-bold d-s" x="674" y="105">&#8220;spam&#8221; /</text>
+  <text class="d-c d-bold d-s" x="674" y="124">&#8220;not spam&#8221;</text>
+
+  <text class="d-c d-tmut d-xs" x="492" y="170">argmax over the last token&#8217;s 2 logits</text>
+</svg>

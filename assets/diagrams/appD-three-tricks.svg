@@ -1,0 +1,31 @@
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-aD3 d-aD3">
+  <title id="t-aD3">Three training-loop enhancements feeding one optimizer step</title>
+  <desc id="d-aD3">Warmup ramps the learning rate in, cosine decay curves it back down, and gradient clipping caps any oversized update. All three combine into a single stabilized optimizer step.</desc>
+  <defs>
+    <marker id="ar-aDc" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="380" y="36">three stabilizing tricks, one training step</text>
+
+  <!-- three source boxes -->
+  <rect class="d-soft" x="40" y="58" width="190" height="50" rx="11"/><text class="d-c d-tac d-bold d-s" x="135" y="80">1 · warmup</text><text class="d-c d-tmut d-xs" x="135" y="98">ease the rate up</text>
+
+  <rect class="d-soft" x="40" y="124" width="190" height="50" rx="11"/><text class="d-c d-tac d-bold d-s" x="135" y="146">2 · cosine decay</text><text class="d-c d-tmut d-xs" x="135" y="164">coast it back down</text>
+
+  <rect class="d-soft" x="40" y="190" width="190" height="50" rx="11"/><text class="d-c d-tac d-bold d-s" x="135" y="212">3 · grad clipping</text><text class="d-c d-tmut d-xs" x="135" y="230">cap the update size</text>
+
+  <!-- converging arrows -->
+  <line class="d-line" x1="230" y1="83" x2="430" y2="140" marker-end="url(#ar-aDc)"/>
+  <line class="d-line" x1="230" y1="149" x2="430" y2="149" marker-end="url(#ar-aDc)"/>
+  <line class="d-line" x1="230" y1="215" x2="430" y2="158" marker-end="url(#ar-aDc)"/>
+
+  <!-- merge node -->
+  <rect class="d-node" x="434" y="124" width="150" height="50" rx="12"/><text class="d-c d-bold d-s" x="509" y="146">train_model</text><text class="d-c d-tmut d-xs" x="509" y="164">per-step logic</text>
+
+  <line class="d-line-accent" x1="584" y1="149" x2="628" y2="149" marker-end="url(#ar-aDc)"/>
+
+  <!-- final stabilized step -->
+  <rect class="d-fill-accent" x="630" y="122" width="98" height="54" rx="12"/><text class="d-c d-tinv d-bold d-s" x="679" y="146">optimizer</text><text class="d-c d-tinv d-bold d-s" x="679" y="164">.step()</text>
+
+  <text class="d-c d-tmut d-xs" x="509" y="208">architecture unchanged — only the optimizer's trajectory is shaped</text>
+</svg>

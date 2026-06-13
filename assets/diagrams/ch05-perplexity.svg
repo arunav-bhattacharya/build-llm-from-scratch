@@ -1,0 +1,21 @@
+<svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-px d-px">
+  <title id="t-px">Perplexity from loss</title>
+  <desc id="d-px">Perplexity is the exponential of the cross-entropy loss, interpreted as the effective number of tokens the model is choosing between.</desc>
+  <defs>
+    <marker id="ar-c5px" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c5px2" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-node" x="40" y="74" width="150" height="48" rx="11"/><text class="d-c d-bold" x="115" y="103">cross-entropy loss</text>
+  <text class="d-c d-tmut d-xs" x="115" y="64">e.g. 10.79</text>
+
+  <line class="d-line" x1="190" y1="98" x2="246" y2="98" marker-end="url(#ar-c5px)"/>
+  <rect class="d-soft" x="248" y="74" width="138" height="48" rx="11"/><text class="d-c d-tac d-bold" x="317" y="103">exp( loss )</text>
+  <text class="d-c d-tmut d-xs" x="317" y="64">torch.exp</text>
+
+  <line class="d-line-accent" x1="386" y1="98" x2="442" y2="98" marker-end="url(#ar-c5px2)"/>
+  <rect class="d-fill-accent" x="444" y="74" width="276" height="48" rx="11"/><text class="d-c d-tinv d-bold" x="582" y="103">perplexity ≈ 48,725</text>
+
+  <text class="d-c d-tmut d-s" x="582" y="156">“effectively guessing between ~48,725 words”</text>
+  <text class="d-c d-tmut d-xs" x="317" y="156">perplexity = exp(loss)</text>
+</svg>

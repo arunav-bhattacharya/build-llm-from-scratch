@@ -1,0 +1,26 @@
+<svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-agp d-agp">
+  <title id="t-agp">Moving a tensor from CPU to GPU with .to("cuda")</title>
+  <desc id="d-agp">A tensor created on the CPU is transferred to the GPU with the .to method; both the model and its data must live on the same device for computations to run, and the GPU then accelerates the work.</desc>
+  <defs>
+    <marker id="ar-agp" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <!-- CPU side -->
+  <rect class="d-panel" x="24" y="40" width="240" height="110" rx="12"/>
+  <text class="d-c d-bold d-s" x="144" y="66">CPU (default device)</text>
+  <rect class="d-node" x="64" y="86" width="160" height="44" rx="10"/>
+  <text class="d-c d-bold d-s" x="144" y="113">tensor</text>
+
+  <!-- transfer arrow with label on a chip -->
+  <line class="d-line-accent" x1="264" y1="108" x2="494" y2="108" marker-end="url(#ar-agp)"/>
+  <rect class="d-chip" x="312" y="76" width="134" height="24" rx="12"/>
+  <text class="d-c d-tac d-bold d-xs" x="379" y="92">.to("cuda")</text>
+
+  <!-- GPU side -->
+  <rect class="d-panel" x="496" y="40" width="240" height="110" rx="12"/>
+  <text class="d-c d-bold d-s" x="616" y="66">GPU (cuda:0)</text>
+  <rect class="d-fill-accent" x="536" y="86" width="160" height="44" rx="10"/>
+  <text class="d-c d-tinv d-bold d-s" x="616" y="113">tensor</text>
+
+  <text class="d-c d-tmut d-xs" x="379" y="170">all tensors in a computation must be on the same device</text>
+</svg>

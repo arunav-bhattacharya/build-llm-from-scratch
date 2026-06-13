@@ -1,0 +1,44 @@
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-aDlr d-aDlr">
+  <title id="t-aDlr">Learning-rate schedule: warmup then cosine decay</title>
+  <desc id="d-aDlr">A learning-rate-versus-step curve. The rate ramps up linearly during a short warmup phase, reaches a peak, then follows a half-cosine curve down to a small minimum by the end of training.</desc>
+  <defs>
+    <marker id="ar-aDa" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <!-- y axis -->
+  <line class="d-line" x1="120" y1="60" x2="120" y2="290" marker-end="url(#ar-aDa)"/>
+  <!-- x axis -->
+  <line class="d-line" x1="120" y1="290" x2="700" y2="290" marker-end="url(#ar-aDa)"/>
+
+  <!-- axis labels -->
+  <text class="d-c d-tmut d-xs" x="64" y="80">learning</text>
+  <text class="d-c d-tmut d-xs" x="64" y="96">rate</text>
+  <text class="d-c d-tmut d-xs" x="690" y="312">step</text>
+
+  <!-- peak / min reference ticks -->
+  <line class="d-dash" x1="120" y1="92" x2="300" y2="92"/>
+  <text class="d-e d-tmut d-xs" x="74" y="96">peak</text>
+  <line class="d-dash" x1="120" y1="250" x2="700" y2="250"/>
+  <text class="d-e d-tmut d-xs" x="80" y="254">min</text>
+
+  <!-- warmup boundary -->
+  <line class="d-dash" x1="300" y1="92" x2="300" y2="290"/>
+
+  <!-- the curve: linear warmup (120,250)->(300,92) then cosine decay to (680,250) -->
+  <path class="d-line-accent" d="M120 250 L300 92 C420 92 430 250 680 250" fill="none"/>
+
+  <!-- plotted points along the curve -->
+  <circle class="d-fill-accent" cx="120" cy="250" r="4"/>
+  <circle class="d-fill-accent" cx="210" cy="171" r="4"/>
+  <circle class="d-fill-accent" cx="300" cy="92" r="4"/>
+  <circle class="d-fill-accent" cx="400" cy="112" r="4"/>
+  <circle class="d-fill-accent" cx="490" cy="170" r="4"/>
+  <circle class="d-fill-accent" cx="590" cy="231" r="4"/>
+  <circle class="d-fill-accent" cx="680" cy="250" r="4"/>
+
+  <!-- phase labels on chips in clear lanes -->
+  <rect class="d-chip" x="150" y="312" width="120" height="22" rx="11"/><text class="d-c d-tac d-xs" x="210" y="327">linear warmup</text>
+  <rect class="d-chip" x="430" y="312" width="120" height="22" rx="11"/><text class="d-c d-tac d-xs" x="490" y="327">cosine decay</text>
+
+  <text class="d-c d-tmut d-xs" x="410" y="46">η(p) = min + (peak − min) · ½(1 + cos(π·p))</text>
+</svg>

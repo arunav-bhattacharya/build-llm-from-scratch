@@ -1,0 +1,32 @@
+<svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-tk d-tk">
+  <title id="t-tk">Top-k sampling</title>
+  <desc id="d-tk">Keep only the k tokens with the highest logits, set the rest to negative infinity, softmax so the kept tokens form a fresh distribution summing to one, then sample from those.</desc>
+  <defs>
+    <marker id="ar-c5tk" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c5tk2" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="380" y="30">k = 3 · a 9-token vocabulary</text>
+
+  <rect class="d-node" x="34" y="58" width="150" height="52" rx="11"/><text class="d-c d-bold d-s" x="109" y="82">all 9 logits</text><text class="d-c d-tmut d-xs" x="109" y="100">full distribution</text>
+
+  <line class="d-line" x1="184" y1="84" x2="226" y2="84" marker-end="url(#ar-c5tk)"/>
+  <rect class="d-soft" x="228" y="58" width="160" height="52" rx="11"/><text class="d-c d-tac d-bold d-s" x="308" y="82">keep top-3</text><text class="d-c d-tmut d-xs" x="308" y="100">torch.topk</text>
+
+  <line class="d-line" x1="388" y1="84" x2="430" y2="84" marker-end="url(#ar-c5tk)"/>
+  <rect class="d-node" x="432" y="58" width="150" height="52" rx="11"/><text class="d-c d-bold d-s" x="507" y="82">rest → −inf</text><text class="d-c d-tmut d-xs" x="507" y="100">mask the rest</text>
+
+  <line class="d-line" x1="582" y1="84" x2="624" y2="84" marker-end="url(#ar-c5tk)"/>
+  <rect class="d-node" x="626" y="58" width="112" height="52" rx="11"/><text class="d-c d-bold d-s" x="682" y="82">softmax</text><text class="d-c d-tmut d-xs" x="682" y="100">renormalize</text>
+
+  <!-- result mini bar chart of the 3 survivors -->
+  <line class="d-line-accent" x1="682" y1="110" x2="682" y2="146" marker-end="url(#ar-c5tk2)"/>
+  <text class="d-c d-tmut d-xs" x="380" y="150">renormalized: only 3 tokens have non-zero probability (sum = 1) → sample one</text>
+
+  <line class="d-line" x1="120" y1="244" x2="660" y2="244"/>
+  <g>
+    <rect class="d-fill-accent" x="170" y="186" width="42" height="58"/><text class="d-c d-tinv d-xs" x="191" y="216">.58</text><text class="d-c d-tmut d-xs" x="191" y="260">forward</text>
+    <rect class="d-fill-accent" x="350" y="208" width="42" height="36"/><text class="d-c d-tinv d-xs" x="371" y="228">.36</text><text class="d-c d-tmut d-xs" x="371" y="260">toward</text>
+    <rect class="d-fill-accent" x="530" y="238" width="42" height="6"/><text class="d-c d-tmut d-xs" x="551" y="232">.06</text><text class="d-c d-tmut d-xs" x="551" y="260">closer</text>
+  </g>
+</svg>

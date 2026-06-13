@@ -1,0 +1,37 @@
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-atl d-atl">
+  <title id="t-atl">A typical PyTorch training loop</title>
+  <desc id="d-atl">For each batch, the model runs a forward pass to logits, the loss is computed, optimizer.zero_grad clears old gradients, loss.backward computes new ones, and optimizer.step updates the weights — then the cycle repeats for the next batch.</desc>
+  <defs>
+    <marker id="ar-atl" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-atl-a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="380" y="26">repeat for every batch, every epoch</text>
+
+  <!-- top row left to right -->
+  <rect class="d-node" x="24" y="52" width="120" height="46" rx="11"/><text class="d-c d-bold d-s" x="84" y="80">load batch</text>
+  <rect class="d-node" x="200" y="52" width="130" height="46" rx="11"/><text class="d-c d-bold d-s" x="265" y="74">forward</text><text class="d-c d-tmut d-xs" x="265" y="90">model(x) → logits</text>
+  <rect class="d-soft" x="386" y="52" width="130" height="46" rx="11"/><text class="d-c d-tac d-bold d-s" x="451" y="74">loss</text><text class="d-c d-tmut d-xs" x="451" y="90">cross_entropy</text>
+  <rect class="d-node" x="572" y="52" width="160" height="46" rx="11"/><text class="d-c d-bold d-s" x="652" y="74">zero_grad()</text><text class="d-c d-tmut d-xs" x="652" y="90">clear old grads</text>
+
+  <line class="d-line" x1="144" y1="75" x2="196" y2="75" marker-end="url(#ar-atl)"/>
+  <line class="d-line" x1="330" y1="75" x2="382" y2="75" marker-end="url(#ar-atl)"/>
+  <line class="d-line" x1="516" y1="75" x2="568" y2="75" marker-end="url(#ar-atl)"/>
+
+  <!-- down on the right -->
+  <line class="d-line" x1="652" y1="98" x2="652" y2="150" marker-end="url(#ar-atl)"/>
+
+  <!-- bottom row right to left -->
+  <rect class="d-fill-accent" x="572" y="152" width="160" height="46" rx="11"/><text class="d-c d-tinv d-bold d-s" x="652" y="174">backward()</text><text class="d-c d-tinv d-xs" x="652" y="190">compute grads</text>
+  <rect class="d-node" x="386" y="152" width="160" height="46" rx="11"/><text class="d-c d-bold d-s" x="466" y="174">step()</text><text class="d-c d-tmut d-xs" x="466" y="190">update weights</text>
+  <rect class="d-node" x="200" y="152" width="146" height="46" rx="11"/><text class="d-c d-bold d-s" x="273" y="180">next batch</text>
+
+  <line class="d-line-accent" x1="572" y1="175" x2="550" y2="175" marker-end="url(#ar-atl-a)"/>
+  <line class="d-line" x1="386" y1="175" x2="350" y2="175" marker-end="url(#ar-atl)"/>
+
+  <!-- loop back up to load batch -->
+  <line class="d-line d-dash" x1="200" y1="175" x2="84" y2="175" marker-end="url(#ar-atl)"/>
+  <line class="d-line d-dash" x1="84" y1="175" x2="84" y2="98" marker-end="url(#ar-atl)"/>
+
+  <text class="d-c d-tac d-bold d-xs" x="380" y="232">order matters: zero_grad → backward → step</text>
+</svg>

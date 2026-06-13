@@ -1,0 +1,33 @@
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-es d-es">
+  <title id="t-es">A word embedding space</title>
+  <desc id="d-es">Similar words cluster together: birds group in one region; countries and their capitals sit apart, connected by parallel offset vectors.</desc>
+  <defs>
+    <marker id="ar-es" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-panel" x="64" y="26" width="656" height="296" rx="14"/>
+  <line class="d-line" x1="96" y1="298" x2="700" y2="298"/>
+  <line class="d-line" x1="100" y1="296" x2="100" y2="48"/>
+  <text class="d-tmut d-xs d-e" x="700" y="316">embedding dimension 1 →</text>
+  <text class="d-tmut d-xs" x="80" y="44">dim 2 ↑</text>
+
+  <!-- birds cluster -->
+  <ellipse cx="588" cy="118" rx="92" ry="64" class="d-fill-soft"/>
+  <text class="d-c d-tac d-xs d-bold" x="588" y="58">birds</text>
+  <circle cx="544" cy="98" r="5" fill="var(--svg-accent)"/><text class="d-s" x="554" y="102">eagle</text>
+  <circle cx="606" cy="104" r="5" fill="var(--svg-accent)"/><text class="d-s" x="616" y="108">duck</text>
+  <circle cx="556" cy="140" r="5" fill="var(--svg-accent)"/><text class="d-s" x="566" y="144">goose</text>
+  <circle cx="620" cy="150" r="5" fill="var(--svg-accent)"/><text class="d-s" x="630" y="154">hawk</text>
+
+  <!-- geography: parallel "capital of" vectors -->
+  <circle cx="168" cy="236" r="5" fill="var(--svg-accent-2)"/><text class="d-s d-c" x="168" y="256">Germany</text>
+  <circle cx="252" cy="196" r="5" fill="var(--svg-accent-2)"/><text class="d-s d-c" x="252" y="186">Berlin</text>
+  <line class="d-line-accent" x1="174" y1="233" x2="246" y2="199" marker-end="url(#ar-es)"/>
+
+  <circle cx="186" cy="288" r="5" fill="var(--svg-accent-2)"/><text class="d-s d-c" x="186" y="308">England</text>
+  <circle cx="270" cy="248" r="5" fill="var(--svg-accent-2)"/><text class="d-s d-c" x="270" y="238">London</text>
+  <line class="d-line-accent" x1="192" y1="285" x2="264" y2="251" marker-end="url(#ar-es)"/>
+
+  <text class="d-tac d-xs d-bold" x="300" y="232">parallel offset =</text>
+  <text class="d-tac d-xs d-bold" x="300" y="248">"capital of"</text>
+</svg>

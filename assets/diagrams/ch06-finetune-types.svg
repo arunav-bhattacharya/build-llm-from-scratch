@@ -1,0 +1,40 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-ft d-ft">
+  <title id="t-ft">Two ways to fine-tune a pretrained LLM</title>
+  <desc id="d-ft">A single pretrained foundation model branches two ways: classification fine-tuning turns it into a specialist that outputs class labels, while instruction fine-tuning turns it into a generalist that follows instruction prompts.</desc>
+  <defs>
+    <marker id="ar-c6a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <rect class="d-node" x="36" y="124" width="148" height="72" rx="13"/>
+  <text class="d-c d-bold d-s" x="110" y="155">pretrained</text>
+  <text class="d-c d-bold d-s" x="110" y="174">foundation model</text>
+
+  <!-- branch lines -->
+  <line class="d-line-accent" x1="184" y1="150" x2="266" y2="78" marker-end="url(#ar-c6a)"/>
+  <line class="d-line" x1="184" y1="170" x2="266" y2="244" marker-end="url(#ar-c6a)"/>
+
+  <!-- top branch: classification -->
+  <rect class="d-fill-accent" x="270" y="44" width="206" height="64" rx="12"/>
+  <text class="d-c d-tinv d-bold d-s" x="373" y="71">classification</text>
+  <text class="d-c d-tinv d-bold d-s" x="373" y="90">fine-tuning</text>
+
+  <line class="d-line-accent" x1="476" y1="76" x2="524" y2="76" marker-end="url(#ar-c6a)"/>
+
+  <rect class="d-soft" x="528" y="44" width="196" height="64" rx="12"/>
+  <text class="d-c d-tac d-bold d-s" x="626" y="69">specialist · class labels</text>
+  <text class="d-c d-tmut d-xs" x="626" y="92">&#8220;spam&#8221; / &#8220;not spam&#8221;</text>
+
+  <!-- bottom branch: instruction -->
+  <rect class="d-node" x="270" y="212" width="206" height="64" rx="12"/>
+  <text class="d-c d-bold d-s" x="373" y="239">instruction</text>
+  <text class="d-c d-bold d-s" x="373" y="258">fine-tuning</text>
+
+  <line class="d-line" x1="476" y1="244" x2="524" y2="244" marker-end="url(#ar-c6a)"/>
+
+  <rect class="d-node-2" x="528" y="212" width="196" height="64" rx="12"/>
+  <text class="d-c d-bold d-s" x="626" y="237">generalist · free text</text>
+  <text class="d-c d-tmut d-xs" x="626" y="260">answers any instruction</text>
+
+  <text class="d-c d-tmut d-xs" x="373" y="135">this chapter</text>
+  <text class="d-c d-tmut d-xs" x="373" y="303">chapter 7</text>
+</svg>

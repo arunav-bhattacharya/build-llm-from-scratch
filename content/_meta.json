@@ -1,0 +1,89 @@
+{
+  "site": {
+    "title": "Build a Large Language Model (From Scratch)",
+    "shortTitle": "Build an LLM",
+    "subtitle": "An Interactive Study Companion",
+    "tagline": "A visual, beginner-friendly walkthrough of every chapter — concepts, code, and intuition.",
+    "book": {
+      "title": "Build a Large Language Model (From Scratch)",
+      "author": "Sebastian Raschka",
+      "publisher": "Manning Publications",
+      "year": "2025",
+      "isbn": "9781633437166",
+      "repo": "https://github.com/rasbt/LLMs-from-scratch"
+    }
+  },
+  "categories": {
+    "intro":    { "label": "Foundations",   "color": "accent" },
+    "build":    { "label": "Stage 1 · Build the Engine", "color": "blue" },
+    "pretrain": { "label": "Stage 2 · Pretraining",      "color": "amber" },
+    "finetune": { "label": "Stage 3 · Fine-Tuning",      "color": "green" },
+    "appendix": { "label": "Appendix",      "color": "coral" }
+  },
+  "sections": [
+    {
+      "slug": "index", "out": "index.html", "group": "home", "nav": false,
+      "title": "Home", "desc": "Start here — an interactive companion to building a GPT-style LLM from scratch."
+    },
+    {
+      "slug": "ch01-understanding-llms", "num": "1", "group": "chapter", "category": "intro",
+      "title": "Understanding Large Language Models", "pages": "1–16", "time": "15 min",
+      "desc": "What an LLM really is, the transformer that powers it, the GPT family, and the three-stage plan to build one."
+    },
+    {
+      "slug": "ch02-text-data", "num": "2", "group": "chapter", "category": "build",
+      "title": "Working with Text Data", "pages": "17–49", "time": "35 min",
+      "desc": "Turning raw text into numbers: tokenization, byte-pair encoding, sliding windows, and token + positional embeddings."
+    },
+    {
+      "slug": "ch03-attention", "num": "3", "group": "chapter", "category": "build",
+      "title": "Coding Attention Mechanisms", "pages": "50–91", "time": "50 min",
+      "desc": "Self-attention from first principles — queries, keys, values, causal masking, dropout, and multi-head attention."
+    },
+    {
+      "slug": "ch04-gpt-from-scratch", "num": "4", "group": "chapter", "category": "build",
+      "title": "Implementing a GPT Model from Scratch", "pages": "92–127", "time": "40 min",
+      "desc": "Assembling the full GPT: layer normalization, GELU feed-forward, shortcut connections, transformer blocks, and text generation."
+    },
+    {
+      "slug": "ch05-pretraining", "num": "5", "group": "chapter", "category": "pretrain",
+      "title": "Pretraining on Unlabeled Data", "pages": "128–168", "time": "45 min",
+      "desc": "The training loop: cross-entropy loss, perplexity, evaluation, temperature & top-k decoding, and loading OpenAI's GPT-2 weights."
+    },
+    {
+      "slug": "ch06-finetuning-classification", "num": "6", "group": "chapter", "category": "finetune",
+      "title": "Fine-Tuning for Classification", "pages": "169–203", "time": "35 min",
+      "desc": "Adapting a pretrained LLM into a spam classifier: data loaders, a classification head, loss/accuracy, and supervised fine-tuning."
+    },
+    {
+      "slug": "ch07-finetuning-instructions", "num": "7", "group": "chapter", "category": "finetune",
+      "title": "Fine-Tuning to Follow Instructions", "pages": "204–250", "time": "45 min",
+      "desc": "Instruction fine-tuning end to end: prompt formats, batching with masking, training, response extraction, and LLM-based evaluation."
+    },
+    {
+      "slug": "appA-pytorch", "letter": "A", "group": "appendix", "category": "appendix",
+      "title": "Introduction to PyTorch", "pages": "251–288", "time": "40 min",
+      "desc": "A from-zero PyTorch primer: tensors, autograd, nn modules, data loaders, training loops, and GPU/multi-GPU training."
+    },
+    {
+      "slug": "appB-references", "letter": "B", "group": "appendix", "category": "appendix",
+      "title": "References & Further Reading", "pages": "289–299", "time": "10 min",
+      "desc": "The book's curated citations, organized by chapter, plus the best community explainers and courses."
+    },
+    {
+      "slug": "appC-exercise-solutions", "letter": "C", "group": "appendix", "category": "appendix",
+      "title": "Exercise Solutions", "pages": "300–312", "time": "25 min",
+      "desc": "Worked solutions to every chapter exercise, with explanations of the reasoning behind each."
+    },
+    {
+      "slug": "appD-training-enhancements", "letter": "D", "group": "appendix", "category": "appendix",
+      "title": "Adding Bells and Whistles to the Training Loop", "pages": "313–321", "time": "15 min",
+      "desc": "Production-grade training upgrades: learning-rate warmup, cosine decay, and gradient clipping."
+    },
+    {
+      "slug": "appE-lora", "letter": "E", "group": "appendix", "category": "appendix",
+      "title": "Parameter-Efficient Fine-Tuning with LoRA", "pages": "322–336", "time": "30 min",
+      "desc": "Low-Rank Adaptation (LoRA): fine-tuning huge models by training tiny low-rank weight updates."
+    }
+  ]
+}

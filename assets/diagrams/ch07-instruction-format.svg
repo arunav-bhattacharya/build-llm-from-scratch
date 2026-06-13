@@ -1,0 +1,42 @@
+<svg viewBox="0 0 760 332" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-if d-if">
+  <title id="t-if">Formatting a dataset entry into the Alpaca prompt template</title>
+  <desc id="d-if">A raw entry with instruction, input, and output fields is reformatted into a single string with a preamble and labeled sections for instruction, input, and response.</desc>
+  <defs>
+    <marker id="ar-c7a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <!-- raw entry -->
+  <text class="d-c d-tmut d-xs" x="150" y="34">raw dataset entry (a dict)</text>
+  <rect class="d-node" x="24" y="46" width="252" height="170" rx="12"/>
+  <g font-size="12.5">
+    <text class="d-e" x="44" y="78">{</text>
+    <text class="d-s d-tblue" x="60" y="100">"instruction":</text>
+    <text class="d-s" x="60" y="118">"Identify the correct</text>
+    <text class="d-s" x="60" y="134">spelling of the word."</text>
+    <text class="d-s d-tblue" x="60" y="158">"input": "Ocassion"</text>
+    <text class="d-s d-tblue" x="60" y="182">"output": "The correct</text>
+    <text class="d-s" x="60" y="198">spelling is 'Occasion'."</text>
+    <text class="d-e" x="44" y="210">}</text>
+  </g>
+
+  <!-- arrow + label -->
+  <line class="d-line-accent" x1="276" y1="131" x2="340" y2="131" marker-end="url(#ar-c7a)"/>
+  <rect class="d-chip" x="286" y="98" width="48" height="22" rx="11"/><text class="d-c d-xs d-tac" x="310" y="113">format</text>
+
+  <!-- alpaca template -->
+  <text class="d-c d-tmut d-xs" x="552" y="34">Alpaca-style prompt string</text>
+  <rect class="d-panel" x="356" y="46" width="380" height="262" rx="12"/>
+  <text class="d-s d-tmut" x="376" y="74" font-size="11.5">Below is an instruction that describes a task.</text>
+  <text class="d-s d-tmut" x="376" y="90" font-size="11.5">Write a response that completes the request.</text>
+
+  <rect class="d-fill-accent" x="376" y="106" width="148" height="22" rx="6"/><text class="d-c d-tinv d-bold d-xs" x="450" y="121">### Instruction:</text>
+  <text class="d-s" x="376" y="146" font-size="11.5">Identify the correct spelling of the word.</text>
+
+  <rect class="d-fill-accent" x="376" y="162" width="104" height="22" rx="6"/><text class="d-c d-tinv d-bold d-xs" x="428" y="177">### Input:</text>
+  <text class="d-s" x="376" y="202" font-size="11.5">Ocassion</text>
+
+  <rect class="d-fill-accent" x="376" y="218" width="130" height="22" rx="6"/><text class="d-c d-tinv d-bold d-xs" x="441" y="233">### Response:</text>
+  <text class="d-s d-tblue" x="376" y="258" font-size="11.5">The correct spelling is 'Occasion'.</text>
+
+  <text class="d-c d-tmut d-xs" x="546" y="290">The ### Input: section is skipped when input is empty.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-aag d-aag">
+  <title id="t-aag">Autograd: backpropagation as the chain rule, right to left</title>
+  <desc id="d-aag">Backpropagation starts at the loss and applies the chain rule backward through each operation, accumulating partial derivatives, until it reaches the gradient of the loss with respect to each trainable parameter.</desc>
+  <defs>
+    <marker id="ar-aag" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <!-- nodes, same chain, gradients flow right to left -->
+  <rect class="d-fill-accent" x="600" y="78" width="120" height="44" rx="11"/><text class="d-c d-tinv d-bold d-s" x="660" y="105">loss</text>
+  <rect class="d-node" x="430" y="78" width="120" height="44" rx="11"/><text class="d-c d-bold d-s" x="490" y="105">a = σ(z)</text>
+  <rect class="d-node" x="260" y="78" width="120" height="44" rx="11"/><text class="d-c d-bold d-s" x="320" y="105">z = x·w + b</text>
+  <rect class="d-soft" x="40" y="78" width="170" height="44" rx="11"/><text class="d-c d-tac d-bold d-s" x="125" y="105">params w, b</text>
+
+  <!-- backward (gradient) arrows, right to left, over the chips -->
+  <line class="d-line-accent d-dash" x1="600" y1="100" x2="554" y2="100" marker-end="url(#ar-aag)"/>
+  <line class="d-line-accent d-dash" x1="430" y1="100" x2="384" y2="100" marker-end="url(#ar-aag)"/>
+  <line class="d-line-accent d-dash" x1="260" y1="100" x2="214" y2="100" marker-end="url(#ar-aag)"/>
+
+  <!-- chained partials as labels over the arrows -->
+  <rect class="d-chip" x="551" y="42" width="56" height="22" rx="11"/><text class="d-c d-tac d-bold d-xs" x="579" y="57">∂L/∂a</text>
+  <rect class="d-chip" x="381" y="42" width="56" height="22" rx="11"/><text class="d-c d-tac d-bold d-xs" x="409" y="57">∂a/∂z</text>
+  <rect class="d-chip" x="207" y="42" width="60" height="22" rx="11"/><text class="d-c d-tac d-bold d-xs" x="237" y="57">∂z/∂w,b</text>
+
+  <text class="d-c d-tac d-bold d-xs" x="380" y="156">backward pass — chain rule: ∂L/∂w = ∂L/∂a · ∂a/∂z · ∂z/∂w</text>
+  <text class="d-c d-tmut d-xs" x="380" y="178">loss.backward() fills each parameter's .grad automatically</text>
+</svg>

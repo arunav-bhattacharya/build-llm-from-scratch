@@ -1,0 +1,34 @@
+<svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-sw d-sw">
+  <title id="t-sw">Sliding-window input and target</title>
+  <desc id="d-sw">The target sequence is the input sequence shifted right by one token; the stride sets how far the window jumps.</desc>
+  <defs>
+    <marker id="ar-sw" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <!-- columns aligned between the two rows -->
+  <text class="d-tmut d-xs d-bold" x="40" y="74">INPUT</text>
+  <g font-size="13">
+    <rect class="d-node" x="120" y="52" width="92" height="38" rx="8"/><text class="d-c" x="166" y="76">LLMs</text>
+    <rect class="d-node" x="220" y="52" width="92" height="38" rx="8"/><text class="d-c" x="266" y="76">learn</text>
+    <rect class="d-node" x="320" y="52" width="92" height="38" rx="8"/><text class="d-c" x="366" y="76">to</text>
+    <rect class="d-node" x="420" y="52" width="92" height="38" rx="8"/><text class="d-c" x="466" y="76">predict</text>
+    <rect class="d-panel" x="520" y="52" width="92" height="38" rx="8" opacity=".5"/><text class="d-c d-tmut" x="566" y="76">one</text>
+  </g>
+
+  <text class="d-tac d-xs d-bold" x="40" y="160">TARGET</text>
+  <g font-size="13">
+    <rect class="d-panel" x="120" y="138" width="92" height="38" rx="8" opacity=".5"/><text class="d-c d-tmut" x="166" y="162">LLMs</text>
+    <rect class="d-soft" x="220" y="138" width="92" height="38" rx="8"/><text class="d-c" x="266" y="162">learn</text>
+    <rect class="d-soft" x="320" y="138" width="92" height="38" rx="8"/><text class="d-c" x="366" y="162">to</text>
+    <rect class="d-soft" x="420" y="138" width="92" height="38" rx="8"/><text class="d-c" x="466" y="162">predict</text>
+    <rect class="d-soft" x="520" y="138" width="92" height="38" rx="8"/><text class="d-c" x="566" y="162">one</text>
+  </g>
+
+  <!-- shift arrows -->
+  <line class="d-line-accent" x1="266" y1="92" x2="266" y2="136" marker-end="url(#ar-sw)"/>
+  <line class="d-line-accent" x1="466" y1="92" x2="466" y2="136" marker-end="url(#ar-sw)"/>
+  <text class="d-c d-tac d-xs d-bold" x="650" y="118">shift +1</text>
+
+  <text class="d-c d-tmut d-xs" x="380" y="222">Target = input shifted right by one token. The model predicts each next token.</text>
+  <text class="d-c d-tmut d-xs" x="380" y="244">stride = how far the window jumps before taking the next sample.</text>
+</svg>

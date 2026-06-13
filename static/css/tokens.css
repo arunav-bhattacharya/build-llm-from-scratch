@@ -1,0 +1,176 @@
+/* ============================================================================
+   tokens.css — fonts + the full design-token system (light & dark).
+   Every other stylesheet references ONLY these variables, so theming is a
+   single attribute flip on <html data-theme>.
+   ========================================================================== */
+
+/* ---- Fonts (self-hosted, OFL-1.1) ---------------------------------------- */
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('../fonts/google-sans-flex/GoogleSansFlex-latin.woff2') format('woff2');
+  font-weight: 100 1000; font-stretch: 75% 125%; font-display: swap; font-style: normal;
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('../fonts/google-sans-flex/GoogleSansFlex-latinext.woff2') format('woff2');
+  font-weight: 100 1000; font-stretch: 75% 125%; font-display: swap; font-style: normal;
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../fonts/google-sans-code/GoogleSansCode.woff2') format('woff2');
+  font-weight: 300 800; font-display: swap; font-style: normal;
+}
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../fonts/google-sans-code/GoogleSansCode-Italic.woff2') format('woff2');
+  font-weight: 300 800; font-display: swap; font-style: italic;
+}
+
+/* ---- Shared (theme-independent) tokens ----------------------------------- */
+:root {
+  --font-sans: 'Google Sans Flex', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Google Sans Code', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --radius-sm: 11px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 99px;
+
+  --topbar-h: 60px;
+  --sidebar-w: 286px;
+  --toc-w: 232px;
+  --content-max: 760px;
+  --page-max: 1360px;
+
+  --step: 4px;
+  --transition: 220ms cubic-bezier(.4, .14, .3, 1);
+}
+
+/* ---- LIGHT (default) ----------------------------------------------------- */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: linear-gradient(165deg, #f8f9fb 0%, #f2f4f8 60%, #f5f6f9 100%);
+  --bg-solid: #f6f7f9;
+  --card: linear-gradient(150deg, #ffffff 0%, #f7f9fc 100%);
+  --card-solid: #ffffff;
+  --card-2: #f4f6fa;
+  --side: linear-gradient(180deg, #f1f3f7 0%, #edf0f5 100%);
+  --top: rgba(248, 249, 251, .82);
+
+  --txt: #22262e;
+  --txt-strong: #11141a;
+  --mut: #626b79;
+  --faint: #8b93a1;
+  --line: #dde2ea;
+  --line-soft: #e7ebf2;
+
+  --code-bg: linear-gradient(140deg, #eef1f6, #ebeef3);
+  --code-bg-solid: #eef1f6;
+  --th: linear-gradient(140deg, #e8ecf3, #e4e9f0);
+  --chip: #e9edf3;
+
+  /* accent — bright pink */
+  --or: #cf1d6e;
+  --accent: #cf1d6e;
+  --accent-bright: #ee5d9d;
+  --accent-ink: #ffffff;
+  --tint: rgba(207, 29, 110, .09);
+  --tint-strong: rgba(207, 29, 110, .16);
+
+  /* category accents */
+  --c-intro: #cf1d6e;   --c-intro-tint: rgba(207, 29, 110, .12);
+  --c-blue: #3a63a8;    --c-blue-tint: rgba(58, 99, 168, .12);
+  --c-amber: #9a7410;   --c-amber-tint: rgba(154, 116, 16, .14);
+  --c-green: #2e7d4a;   --c-green-tint: rgba(46, 125, 74, .13);
+  --c-coral: #b13a2e;   --c-coral-tint: rgba(177, 58, 46, .12);
+
+  /* layered 3D shadows */
+  --sh: 0 8px 22px rgba(45, 55, 75, .10);
+  --sh-sm: 0 2px 6px rgba(45, 55, 75, .08), 0 1px 2px rgba(45, 55, 75, .06);
+  --sh-lg: 0 18px 40px rgba(45, 55, 75, .16), 0 6px 14px rgba(45, 55, 75, .10);
+  --sh-inset: inset 0 1px 0 rgba(255, 255, 255, .8);
+  --ring: 0 0 0 3px rgba(207, 29, 110, .35);
+
+  /* diagram bridge */
+  --svg-line: #9aa6b8;
+  --svg-node: #ffffff;        --svg-node-lo: #e9eef5;
+  --svg-node-2: #f2f5f9;      --svg-node-2-lo: #e3e9f1;
+  --svg-node-stroke: #ccd5e1;
+  --svg-text: #2a2f38;
+  --svg-muted: #66707f;
+  --svg-accent: #cf1d6e;      --svg-accent-hi: #ee6ba6;
+  --svg-accent-2: #3a63a8;
+  --svg-soft-hi: #fdedf4;     --svg-soft-lo: #fbdbea;
+  --svg-chip: #ffffff;        --svg-chip-lo: #eef1f6;
+  --svg-tray: linear-gradient(155deg, #e9edf3, #e1e7ef);
+  --shadow-svg: rgba(45, 55, 75, .2);
+}
+
+/* ---- DARK ---------------------------------------------------------------- */
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: radial-gradient(140% 120% at 50% -15%, #3d3d3d 0%, #202020 30%, #0c0c0c 62%, #000000 100%);
+  --bg-solid: #000000;
+  --card: linear-gradient(155deg, #242424 0%, #131313 50%, #080808 100%);
+  --card-solid: #161616;
+  --card-2: #1c1c1f;
+  --side: linear-gradient(180deg, #1a1a1a 0%, #0b0b0b 100%);
+  --top: rgba(8, 8, 8, .82);
+
+  --txt: #f3f3f3;
+  --txt-strong: #ffffff;
+  --mut: #9b9b9b;
+  --faint: #6f6f6f;
+  --line: #2c2c2c;
+  --line-soft: #232323;
+
+  --code-bg: linear-gradient(140deg, #161616, #1e1e1e);
+  --code-bg-solid: #161616;
+  --th: linear-gradient(140deg, #272727, #151515);
+  --chip: #1e1e1e;
+
+  /* accent — the bright pink carried into dark mode (per request) */
+  --or: #ee5d9d;
+  --accent: #ee5d9d;
+  --accent-bright: #ff7ab4;
+  --accent-ink: #1a0410;
+  --tint: rgba(238, 93, 157, .13);
+  --tint-strong: rgba(238, 93, 157, .22);
+
+  --c-intro: #ee5d9d;   --c-intro-tint: rgba(238, 93, 157, .16);
+  --c-blue: #6c98dd;    --c-blue-tint: rgba(108, 152, 221, .16);
+  --c-amber: #d9aa3c;   --c-amber-tint: rgba(217, 170, 60, .16);
+  --c-green: #5cb377;   --c-green-tint: rgba(92, 179, 119, .16);
+  --c-coral: #e06a5c;   --c-coral-tint: rgba(224, 106, 92, .16);
+
+  --sh: 0 12px 30px rgba(0, 0, 0, .65), 0 3px 10px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255, 255, 255, .07), inset 0 -1px 1px rgba(0, 0, 0, .7);
+  --sh-sm: 0 3px 9px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .06);
+  --sh-lg: 0 20px 44px rgba(0, 0, 0, .7), 0 7px 16px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .08);
+  --sh-inset: inset 0 1px 0 rgba(255, 255, 255, .06);
+  --ring: 0 0 0 3px rgba(238, 93, 157, .4);
+
+  --svg-line: #45484f;
+  --svg-node: #2d2d33;        --svg-node-lo: #1b1b1f;
+  --svg-node-2: #242428;      --svg-node-2-lo: #161619;
+  --svg-node-stroke: #3c3c44;
+  --svg-text: #e8e8ea;
+  --svg-muted: #9a9aa2;
+  --svg-accent: #ee5d9d;      --svg-accent-hi: #ff86bd;
+  --svg-accent-2: #6c98dd;
+  --svg-soft-hi: #36212c;     --svg-soft-lo: #1f141a;
+  --svg-chip: #2a2a30;        --svg-chip-lo: #1a1a1e;
+  --svg-tray: linear-gradient(155deg, #101012, #060607);
+  --shadow-svg: rgba(0, 0, 0, .6);
+}
+
+/* category helper: an element with data-category resolves --cat / --cat-tint */
+[data-category='intro']    { --cat: var(--c-intro);  --cat-tint: var(--c-intro-tint); }
+[data-category='build']    { --cat: var(--c-blue);   --cat-tint: var(--c-blue-tint); }
+[data-category='pretrain'] { --cat: var(--c-amber);  --cat-tint: var(--c-amber-tint); }
+[data-category='finetune'] { --cat: var(--c-green);  --cat-tint: var(--c-green-tint); }
+[data-category='appendix'] { --cat: var(--c-coral);  --cat-tint: var(--c-coral-tint); }

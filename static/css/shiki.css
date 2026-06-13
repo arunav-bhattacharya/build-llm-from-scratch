@@ -1,0 +1,14 @@
+/* ============================================================================
+   shiki.css — bridges Shiki's dual-theme output to the active theme.
+   Code is highlighted once at build time with defaultColor:false, emitting
+   --shiki-light / --shiki-dark custom properties per token. We just pick which
+   one to apply — so toggling the theme recolors code instantly, no rehighlight.
+   ========================================================================== */
+
+.shiki, .shiki span { color: var(--shiki-light); background-color: transparent !important; }
+[data-theme='dark'] .shiki,
+[data-theme='dark'] .shiki span { color: var(--shiki-dark); }
+
+/* Each rendered line is a block so horizontal padding/selection behave well. */
+.shiki .line { display: inline-block; width: 100%; min-height: 1.2em; }
+.shiki .line:empty::after { content: ' '; }

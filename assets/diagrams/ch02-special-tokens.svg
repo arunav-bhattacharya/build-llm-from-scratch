@@ -1,0 +1,28 @@
+<svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-st d-st">
+  <title id="t-st">Special context tokens</title>
+  <desc id="d-st">Two special tokens are appended to the vocabulary: endoftext as a document separator and unk for unknown words.</desc>
+  <defs>
+    <marker id="ar-st" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-node" x="60" y="34" width="280" height="218" rx="12"/>
+  <text class="d-c d-bold d-s" x="140" y="60">token</text>
+  <text class="d-c d-bold d-s" x="276" y="60">ID</text>
+  <line class="d-line" x1="78" y1="72" x2="322" y2="72"/>
+  <g font-size="13">
+    <text class="d-c d-tmut" x="140" y="98">your</text><text class="d-c d-tmut" x="276" y="98">1128</text>
+    <text class="d-c d-tmut" x="140" y="124">yourself</text><text class="d-c d-tmut" x="276" y="124">1129</text>
+  </g>
+  <rect class="d-soft" x="74" y="140" width="252" height="42" rx="9"/>
+  <text class="d-c d-bold d-s" x="140" y="166">&lt;|endoftext|&gt;</text><text class="d-c d-tac d-bold" x="276" y="166">1130</text>
+  <rect class="d-soft" x="74" y="192" width="252" height="42" rx="9"/>
+  <text class="d-c d-bold d-s" x="140" y="218">&lt;|unk|&gt;</text><text class="d-c d-tac d-bold" x="276" y="218">1131</text>
+
+  <line class="d-line-accent" x1="340" y1="161" x2="430" y2="161" marker-end="url(#ar-st)"/>
+  <rect class="d-chip" x="436" y="142" width="278" height="40" rx="11"/>
+  <text class="d-c d-s" x="575" y="167">separates unrelated documents</text>
+
+  <line class="d-line-accent" x1="340" y1="213" x2="430" y2="213" marker-end="url(#ar-st)"/>
+  <rect class="d-chip" x="436" y="194" width="278" height="40" rx="11"/>
+  <text class="d-c d-s" x="575" y="219">stands in for unknown words</text>
+</svg>

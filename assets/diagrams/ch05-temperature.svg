@@ -1,0 +1,83 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-tp d-tp">
+  <title id="t-tp">Temperature scaling of next-token probabilities</title>
+  <desc id="d-tp">Lowering the temperature sharpens the probability distribution toward the single most likely token; raising it flattens the distribution so unlikely tokens become more probable.</desc>
+
+  <text class="d-c d-tmut d-xs" x="380" y="34">next-token probability over a 9-word vocabulary</text>
+
+  <!-- baseline -->
+  <line class="d-line" x1="70" y1="232" x2="700" y2="232"/>
+  <text class="d-e d-tmut d-xs" x="62" y="120">prob</text>
+
+  <!-- legend -->
+  <rect class="d-node-2" x="300" y="48" width="16" height="12"/><text class="d-s" x="322" y="59">T = 0.1 (peaky)</text>
+  <rect class="d-fill-soft" x="438" y="48" width="16" height="12"/><text class="d-s" x="460" y="59">T = 1 (original)</text>
+  <rect class="d-fill-accent" x="566" y="48" width="16" height="12"/><text class="d-s" x="588" y="59">T = 5 (flat)</text>
+
+  <!-- groups of 3 bars per token; baseline y=232. heights scaled (max ~150px) -->
+  <!-- closer -->
+  <g>
+    <rect class="d-node-2"  x="78"  y="226" width="14" height="6"/>
+    <rect class="d-fill-soft" x="93" y="222" width="14" height="10"/>
+    <rect class="d-fill-accent" x="108" y="200" width="14" height="32"/>
+    <text class="d-c d-tmut d-xs" x="100" y="252">closer</text>
+  </g>
+  <!-- every -->
+  <g>
+    <rect class="d-node-2"  x="148" y="231" width="14" height="1"/>
+    <rect class="d-fill-soft" x="163" y="230" width="14" height="2"/>
+    <rect class="d-fill-accent" x="178" y="216" width="14" height="16"/>
+    <text class="d-c d-tmut d-xs" x="170" y="252">every</text>
+  </g>
+  <!-- effort -->
+  <g>
+    <rect class="d-node-2"  x="218" y="232" width="14" height="0.5"/>
+    <rect class="d-fill-soft" x="233" y="231" width="14" height="1"/>
+    <rect class="d-fill-accent" x="248" y="220" width="14" height="12"/>
+    <text class="d-c d-tmut d-xs" x="240" y="252">effort</text>
+  </g>
+  <!-- forward (the peak) -->
+  <g>
+    <rect class="d-node-2"  x="288" y="82"  width="14" height="150"/>
+    <rect class="d-fill-soft" x="303" y="82" width="14" height="150"/>
+    <rect class="d-fill-accent" x="318" y="186" width="14" height="46"/>
+    <text class="d-c d-tac d-bold d-xs" x="310" y="252">forward</text>
+  </g>
+  <!-- inches -->
+  <g>
+    <rect class="d-node-2"  x="358" y="230" width="14" height="2"/>
+    <rect class="d-fill-soft" x="373" y="227" width="14" height="5"/>
+    <rect class="d-fill-accent" x="388" y="208" width="14" height="24"/>
+    <text class="d-c d-tmut d-xs" x="380" y="252">inches</text>
+  </g>
+  <!-- moves -->
+  <g>
+    <rect class="d-node-2"  x="428" y="232" width="14" height="0.5"/>
+    <rect class="d-fill-soft" x="443" y="231" width="14" height="1"/>
+    <rect class="d-fill-accent" x="458" y="221" width="14" height="11"/>
+    <text class="d-c d-tmut d-xs" x="450" y="252">moves</text>
+  </g>
+  <!-- pizza -->
+  <g>
+    <rect class="d-node-2"  x="498" y="232" width="14" height="0.5"/>
+    <rect class="d-fill-soft" x="513" y="231" width="14" height="1"/>
+    <rect class="d-fill-accent" x="528" y="221" width="14" height="11"/>
+    <text class="d-c d-tmut d-xs" x="520" y="252">pizza</text>
+  </g>
+  <!-- toward -->
+  <g>
+    <rect class="d-node-2"  x="568" y="138" width="14" height="94"/>
+    <rect class="d-fill-soft" x="583" y="142" width="14" height="90"/>
+    <rect class="d-fill-accent" x="598" y="192" width="14" height="40"/>
+    <text class="d-c d-tmut d-xs" x="590" y="252">toward</text>
+  </g>
+  <!-- you -->
+  <g>
+    <rect class="d-node-2"  x="638" y="230" width="14" height="2"/>
+    <rect class="d-fill-soft" x="653" y="227" width="14" height="5"/>
+    <rect class="d-fill-accent" x="668" y="208" width="14" height="24"/>
+    <text class="d-c d-tmut d-xs" x="660" y="252">you</text>
+  </g>
+
+  <text class="d-c d-tmut d-xs" x="200" y="292">low temperature → confident, repetitive</text>
+  <text class="d-c d-tmut d-xs" x="560" y="292">high temperature → creative, riskier</text>
+</svg>

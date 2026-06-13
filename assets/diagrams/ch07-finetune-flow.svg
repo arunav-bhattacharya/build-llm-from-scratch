@@ -1,0 +1,39 @@
+<svg viewBox="0 0 760 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-ff d-ff">
+  <title id="t-ff">Instruction fine-tuning pipeline</title>
+  <desc id="d-ff">A pretrained GPT-2 medium model is trained on a formatted instruction dataset to produce an instruction-following model.</desc>
+  <defs>
+    <marker id="ar-c7c" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c7c2" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <!-- pretrained model -->
+  <rect class="d-node" x="24" y="64" width="166" height="68" rx="12"/>
+  <text class="d-c d-bold d-s" x="107" y="92">pretrained</text>
+  <text class="d-c d-bold d-s" x="107" y="110">GPT-2 medium</text>
+  <text class="d-c d-tmut d-xs" x="107" y="148">355M params · text completer</text>
+
+  <line class="d-line" x1="190" y1="98" x2="244" y2="98" marker-end="url(#ar-c7c)"/>
+
+  <!-- dataset -->
+  <rect class="d-soft" x="246" y="64" width="178" height="68" rx="12"/>
+  <text class="d-c d-tac d-bold d-s" x="335" y="92">instruction dataset</text>
+  <text class="d-c d-tac d-bold d-s" x="335" y="110">(Alpaca prompts)</text>
+  <text class="d-c d-tmut d-xs" x="335" y="148">1,100 instruction–response pairs</text>
+
+  <line class="d-line" x1="424" y1="98" x2="478" y2="98" marker-end="url(#ar-c7c)"/>
+
+  <!-- fine-tune -->
+  <rect class="d-node" x="480" y="64" width="120" height="68" rx="12"/>
+  <text class="d-c d-bold d-s" x="540" y="92">fine-tune</text>
+  <text class="d-c d-bold d-s" x="540" y="110">(2 epochs)</text>
+  <text class="d-c d-tmut d-xs" x="540" y="148">supervised, next-token loss</text>
+
+  <line class="d-line-accent" x1="600" y1="98" x2="654" y2="98" marker-end="url(#ar-c7c2)"/>
+
+  <!-- result -->
+  <rect class="d-fill-accent" x="656" y="64" width="80" height="68" rx="12"/>
+  <text class="d-c d-tinv d-bold d-s" x="696" y="92">follows</text>
+  <text class="d-c d-tinv d-bold d-s" x="696" y="110">instructions</text>
+
+  <text class="d-c d-tmut d-xs" x="380" y="38">A capable text completer learns good "manners": doing what each instruction asks.</text>
+</svg>

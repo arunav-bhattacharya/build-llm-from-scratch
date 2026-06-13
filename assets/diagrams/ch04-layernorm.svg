@@ -1,0 +1,34 @@
+<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-ln d-ln">
+  <title id="t-ln">Layer normalization</title>
+  <desc id="d-ln">Raw layer activations are re-centered to mean zero and unit variance, then rescaled and shifted by two learned parameters.</desc>
+  <defs>
+    <marker id="ar-c4ln" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c4ln-a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-node" x="30" y="84" width="150" height="56" rx="11"/>
+  <text class="d-c d-bold" x="105" y="110">raw activations</text>
+  <text class="d-c d-tmut d-xs" x="105" y="160">mean = 0.13 · var = 0.39</text>
+
+  <line class="d-line" x1="180" y1="112" x2="226" y2="112" marker-end="url(#ar-c4ln)"/>
+
+  <rect class="d-soft" x="228" y="84" width="184" height="56" rx="11"/>
+  <text class="d-c d-tac d-bold" x="320" y="106">subtract mean,</text>
+  <text class="d-c d-tac d-bold" x="320" y="124">divide by std</text>
+  <text class="d-c d-tmut d-xs" x="320" y="160">mean = 0 · var = 1</text>
+
+  <line class="d-line" x1="412" y1="112" x2="458" y2="112" marker-end="url(#ar-c4ln)"/>
+
+  <rect class="d-node" x="460" y="84" width="118" height="56" rx="11"/>
+  <text class="d-c d-bold d-s" x="519" y="106">scale × +</text>
+  <text class="d-c d-bold d-s" x="519" y="124">shift</text>
+  <text class="d-c d-tmut d-xs" x="519" y="160">2 learned params</text>
+
+  <line class="d-line-accent" x1="578" y1="112" x2="624" y2="112" marker-end="url(#ar-c4ln-a)"/>
+
+  <rect class="d-fill-accent" x="626" y="84" width="108" height="56" rx="11"/>
+  <text class="d-c d-tinv d-bold d-s" x="680" y="106">normalized</text>
+  <text class="d-c d-tinv d-bold d-s" x="680" y="124">output</text>
+
+  <text class="d-c d-tmut d-xs" x="380" y="206">y = scale · (x − μ) / √(σ² + ε) + shift</text>
+</svg>

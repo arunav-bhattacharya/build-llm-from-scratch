@@ -1,0 +1,37 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-cfg d-cfg">
+  <title id="t-cfg">The GPT_CONFIG_124M configuration</title>
+  <desc id="d-cfg">The seven settings that define the smallest GPT-2 model: vocabulary size, context length, embedding dimension, number of heads, number of layers, dropout rate, and qkv bias.</desc>
+
+  <text class="d-c d-bold" x="380" y="34" font-size="15">GPT_CONFIG_124M — the smallest GPT-2 (124M parameters)</text>
+
+  <!-- row 1 -->
+  <rect class="d-soft" x="40" y="60" width="220" height="58" rx="11"/>
+  <text class="d-c d-tac d-bold" x="150" y="86">vocab_size = 50257</text>
+  <text class="d-c d-tmut d-xs" x="150" y="105">tokens the BPE vocabulary knows</text>
+
+  <rect class="d-soft" x="278" y="60" width="220" height="58" rx="11"/>
+  <text class="d-c d-tac d-bold" x="388" y="86">context_length = 1024</text>
+  <text class="d-c d-tmut d-xs" x="388" y="105">max tokens it can read at once</text>
+
+  <rect class="d-soft" x="516" y="60" width="204" height="58" rx="11"/>
+  <text class="d-c d-tac d-bold" x="618" y="86">emb_dim = 768</text>
+  <text class="d-c d-tmut d-xs" x="618" y="105">size of each token vector</text>
+
+  <!-- row 2 -->
+  <rect class="d-node" x="40" y="134" width="220" height="58" rx="11"/>
+  <text class="d-c d-bold" x="150" y="160">n_heads = 12</text>
+  <text class="d-c d-tmut d-xs" x="150" y="179">parallel attention heads</text>
+
+  <rect class="d-node" x="278" y="134" width="220" height="58" rx="11"/>
+  <text class="d-c d-bold" x="388" y="160">n_layers = 12</text>
+  <text class="d-c d-tmut d-xs" x="388" y="179">stacked transformer blocks</text>
+
+  <rect class="d-node" x="516" y="134" width="204" height="58" rx="11"/>
+  <text class="d-c d-bold" x="618" y="160">drop_rate = 0.1</text>
+  <text class="d-c d-tmut d-xs" x="618" y="179">10% dropout, training only</text>
+
+  <!-- row 3 single -->
+  <rect class="d-node-2" x="278" y="208" width="220" height="58" rx="11"/>
+  <text class="d-c d-bold" x="388" y="234">qkv_bias = False</text>
+  <text class="d-c d-tmut d-xs" x="388" y="253">no bias on Q/K/V projections</text>
+</svg>

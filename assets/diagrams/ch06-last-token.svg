@@ -1,0 +1,43 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-lt d-lt">
+  <title id="t-lt">Why the classifier reads only the last token</title>
+  <desc id="d-lt">Each token produces an output row, but only the last token's two logits feed the classifier. Because of causal attention, the last token has attended to every earlier token, so its representation summarizes the whole message.</desc>
+  <defs>
+    <marker id="ar-c6c" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="200" y="34">each input token &#8594; one output row of 2 logits</text>
+
+  <!-- four token rows -->
+  <rect class="d-node" x="40" y="52" width="92" height="40" rx="9"/><text class="d-c d-s" x="86" y="77">Do</text>
+  <rect class="d-node" x="40" y="100" width="92" height="40" rx="9"/><text class="d-c d-s" x="86" y="125">you</text>
+  <rect class="d-node" x="40" y="148" width="92" height="40" rx="9"/><text class="d-c d-s" x="86" y="173">have</text>
+  <rect class="d-fill-accent" x="40" y="196" width="92" height="40" rx="9"/><text class="d-c d-tinv d-bold d-s" x="86" y="221">time</text>
+
+  <!-- arrows to output rows -->
+  <line class="d-line" x1="132" y1="72" x2="192" y2="72" marker-end="url(#ar-c6c)"/>
+  <line class="d-line" x1="132" y1="120" x2="192" y2="120" marker-end="url(#ar-c6c)"/>
+  <line class="d-line" x1="132" y1="168" x2="192" y2="168" marker-end="url(#ar-c6c)"/>
+  <line class="d-line-accent" x1="132" y1="216" x2="192" y2="216" marker-end="url(#ar-c6c)"/>
+
+  <!-- output rows (faded for first three) -->
+  <rect class="d-soft" x="196" y="52" width="150" height="40" rx="9" opacity="0.45"/><text class="d-c d-tmut d-xs" x="271" y="77">[ -1.59,  0.99 ]</text>
+  <rect class="d-soft" x="196" y="100" width="150" height="40" rx="9" opacity="0.45"/><text class="d-c d-tmut d-xs" x="271" y="125">[ -3.72,  7.45 ]</text>
+  <rect class="d-soft" x="196" y="148" width="150" height="40" rx="9" opacity="0.45"/><text class="d-c d-tmut d-xs" x="271" y="173">[ -2.27,  6.60 ]</text>
+  <rect class="d-fill-accent" x="196" y="196" width="150" height="40" rx="9"/><text class="d-c d-tinv d-bold d-xs" x="271" y="221">[ -3.60,  3.99 ]</text>
+
+  <text class="d-c d-tmut d-xs" x="271" y="262">only the last row is used</text>
+
+  <!-- arrow to classifier -->
+  <line class="d-line-accent" x1="346" y1="216" x2="402" y2="216" marker-end="url(#ar-c6c)"/>
+
+  <rect class="d-node" x="406" y="194" width="150" height="44" rx="11"/>
+  <text class="d-c d-bold d-s" x="481" y="215">argmax</text>
+  <text class="d-c d-tmut d-xs" x="481" y="231">&#8594; class label</text>
+
+  <!-- causal note -->
+  <rect class="d-soft" x="406" y="56" width="318" height="104" rx="12"/>
+  <text class="d-c d-tac d-bold d-s" x="565" y="82">Causal attention</text>
+  <text class="d-c d-s" x="565" y="108">The last token has attended to</text>
+  <text class="d-c d-s" x="565" y="128">every earlier token, so its row</text>
+  <text class="d-c d-s" x="565" y="148">already &#8220;read&#8221; the whole message.</text>
+</svg>

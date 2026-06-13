@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-arch d-arch">
+  <title id="t-arch">The full GPT model architecture</title>
+  <desc id="d-arch">Tokenized text becomes token plus positional embeddings, flows through twelve stacked transformer blocks, then a final layer normalization and a linear output head produce logits over the vocabulary.</desc>
+  <defs>
+    <marker id="ar-c4ar" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c4ar-a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <!-- bottom: tokenized text -->
+  <rect class="d-node" x="270" y="500" width="220" height="44" rx="11"/>
+  <text class="d-c d-bold d-s" x="380" y="527">Tokenized text  "Every effort moves you"</text>
+
+  <line class="d-line" x1="380" y1="500" x2="380" y2="476" marker-end="url(#ar-c4ar)"/>
+
+  <!-- embeddings: token + positional, side by side merging -->
+  <rect class="d-soft" x="190" y="430" width="170" height="44" rx="11"/>
+  <text class="d-c d-tac d-bold d-s" x="275" y="457">Token embeddings</text>
+  <rect class="d-soft" x="400" y="430" width="170" height="44" rx="11"/>
+  <text class="d-c d-tac d-bold d-s" x="485" y="457">Positional embeddings</text>
+
+  <line class="d-line" x1="275" y1="430" x2="362" y2="392" marker-end="url(#ar-c4ar)"/>
+  <line class="d-line" x1="485" y1="430" x2="398" y2="392" marker-end="url(#ar-c4ar)"/>
+
+  <rect class="d-node-2" x="300" y="350" width="160" height="40" rx="11"/>
+  <text class="d-c d-bold d-s" x="380" y="375">add + dropout</text>
+
+  <line class="d-line" x1="380" y1="350" x2="380" y2="326" marker-end="url(#ar-c4ar)"/>
+
+  <!-- stacked transformer blocks: drawn as offset cards -->
+  <rect class="d-node" x="276" y="252" width="208" height="62" rx="12"/>
+  <rect class="d-node" x="268" y="244" width="208" height="62" rx="12"/>
+  <rect class="d-fill-accent" x="260" y="236" width="208" height="62" rx="12"/>
+  <text class="d-c d-tinv d-bold" x="364" y="262">Transformer block</text>
+  <text class="d-c d-tinv d-s" x="364" y="284">× 12 (n_layers)</text>
+
+  <line class="d-line" x1="380" y1="236" x2="380" y2="206" marker-end="url(#ar-c4ar)"/>
+
+  <rect class="d-node" x="290" y="164" width="180" height="42" rx="11"/>
+  <text class="d-c d-bold d-s" x="380" y="190">Final LayerNorm</text>
+
+  <line class="d-line" x1="380" y1="164" x2="380" y2="140" marker-end="url(#ar-c4ar)"/>
+
+  <rect class="d-node" x="278" y="98" width="204" height="42" rx="11"/>
+  <text class="d-c d-bold d-s" x="380" y="124">Linear output head</text>
+
+  <line class="d-line-accent" x1="380" y1="98" x2="380" y2="74" marker-end="url(#ar-c4ar-a)"/>
+
+  <rect class="d-soft" x="270" y="30" width="220" height="44" rx="11"/>
+  <text class="d-c d-tac d-bold d-s" x="380" y="52">Logits  (b, n, 50257)</text>
+  <text class="d-c d-tmut d-xs" x="380" y="68">one score per vocabulary token</text>
+
+  <!-- right-side annotations in a clear lane -->
+  <text class="d-tmut d-xs" x="560" y="455">map IDs → vectors,</text>
+  <text class="d-tmut d-xs" x="560" y="469">add word order</text>
+  <text class="d-tmut d-xs" x="500" y="270">repeated stack —</text>
+  <text class="d-tmut d-xs" x="500" y="284">the model's depth</text>
+  <text class="d-tmut d-xs" x="500" y="123">projects to vocab</text>
+</svg>

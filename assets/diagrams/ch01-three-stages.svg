@@ -1,0 +1,42 @@
+<svg viewBox="0 0 760 362" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-3s d-3s">
+  <title id="t-3s">The three stages of building an LLM</title>
+  <desc id="d-3s">Stage 1 builds the architecture and data pipeline; stage 2 pretrains a foundation model; stage 3 fine-tunes it into a classifier or assistant.</desc>
+  <defs>
+    <marker id="ar-3s" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <rect class="d-node" x="20" y="40" width="212" height="290" rx="14"/>
+  <path d="M20 54 a14 14 0 0 1 14 -14 h184 a14 14 0 0 1 14 14 v34 h-212 z" fill="var(--c-blue)"/>
+  <text class="d-c d-xs d-bold" x="126" y="62" fill="#fff" opacity=".92">STAGE 1 · CH. 2–4</text>
+  <text class="d-c d-bold" x="126" y="82" font-size="15" fill="#fff">Build the engine</text>
+  <text class="d-t d-s" x="42" y="126">1 · Data prep &amp; sampling</text>
+  <text class="d-t d-s" x="42" y="158">2 · Attention mechanism</text>
+  <text class="d-t d-s" x="42" y="190">3 · LLM architecture</text>
+  <rect x="42" y="264" width="168" height="46" rx="10" fill="var(--c-blue)" opacity=".13"/>
+  <text class="d-c d-xs" x="126" y="284" fill="var(--c-blue)">builds →</text>
+  <text class="d-c d-s d-bold" x="126" y="300" fill="var(--c-blue)">an untrained GPT</text>
+
+  <rect class="d-node" x="274" y="40" width="212" height="290" rx="14"/>
+  <path d="M274 54 a14 14 0 0 1 14 -14 h184 a14 14 0 0 1 14 14 v34 h-212 z" fill="var(--c-amber)"/>
+  <text class="d-c d-xs d-bold" x="380" y="62" fill="#fff" opacity=".92">STAGE 2 · CH. 5</text>
+  <text class="d-c d-bold" x="380" y="82" font-size="15" fill="#fff">Pretrain</text>
+  <text class="d-t d-s" x="296" y="126">4 · Pretraining loop</text>
+  <text class="d-t d-s" x="296" y="158">5 · Evaluate the model</text>
+  <text class="d-t d-s" x="296" y="190">6 · Load GPT-2 weights</text>
+  <rect x="296" y="264" width="168" height="46" rx="10" fill="var(--c-amber)" opacity=".15"/>
+  <text class="d-c d-xs" x="380" y="284" fill="var(--c-amber)">produces →</text>
+  <text class="d-c d-s d-bold" x="380" y="300" fill="var(--c-amber)">a foundation model</text>
+
+  <rect class="d-node" x="528" y="40" width="212" height="290" rx="14"/>
+  <path d="M528 54 a14 14 0 0 1 14 -14 h184 a14 14 0 0 1 14 14 v34 h-212 z" fill="var(--c-green)"/>
+  <text class="d-c d-xs d-bold" x="634" y="62" fill="#fff" opacity=".92">STAGE 3 · CH. 6–7</text>
+  <text class="d-c d-bold" x="634" y="82" font-size="15" fill="#fff">Fine-tune</text>
+  <text class="d-t d-s" x="550" y="126">7 · Classification tuning</text>
+  <text class="d-t d-s" x="550" y="158">8 · Instruction tuning</text>
+  <rect x="550" y="264" width="168" height="46" rx="10" fill="var(--c-green)" opacity=".14"/>
+  <text class="d-c d-xs" x="634" y="284" fill="var(--c-green)">yields →</text>
+  <text class="d-c d-s d-bold" x="634" y="300" fill="var(--c-green)">classifier · assistant</text>
+
+  <line class="d-line" x1="232" y1="185" x2="272" y2="185" marker-end="url(#ar-3s)"/>
+  <line class="d-line" x1="486" y1="185" x2="526" y2="185" marker-end="url(#ar-3s)"/>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-aat d-aat">
+  <title id="t-aat">Tensor ranks: scalar, vector, matrix, 3-D tensor</title>
+  <desc id="d-aat">A tensor's rank is its number of dimensions. Rank 0 is a single number (scalar), rank 1 a list (vector), rank 2 a grid (matrix), and rank 3 a stack of grids.</desc>
+
+  <!-- rank 0: scalar -->
+  <rect class="d-node" x="24" y="96" width="44" height="44" rx="10"/>
+  <text class="d-c d-bold" x="46" y="124">7</text>
+  <text class="d-c d-tmut d-xs" x="46" y="68">rank 0</text>
+  <text class="d-c d-bold d-s" x="46" y="166">scalar</text>
+  <text class="d-c d-tmut d-xs" x="46" y="184">a number</text>
+
+  <!-- rank 1: vector -->
+  <g>
+    <rect class="d-node" x="150" y="96" width="40" height="44" rx="8"/>
+    <rect class="d-node" x="190" y="96" width="40" height="44" rx="8"/>
+    <rect class="d-node" x="230" y="96" width="40" height="44" rx="8"/>
+    <text class="d-c d-bold" x="170" y="124">1</text>
+    <text class="d-c d-bold" x="210" y="124">2</text>
+    <text class="d-c d-bold" x="250" y="124">3</text>
+  </g>
+  <text class="d-c d-tmut d-xs" x="210" y="68">rank 1</text>
+  <text class="d-c d-bold d-s" x="210" y="166">vector</text>
+  <text class="d-c d-tmut d-xs" x="210" y="184">a list of numbers</text>
+
+  <!-- rank 2: matrix -->
+  <g>
+    <rect class="d-soft" x="348" y="80" width="40" height="40" rx="8"/>
+    <rect class="d-soft" x="388" y="80" width="40" height="40" rx="8"/>
+    <rect class="d-soft" x="348" y="120" width="40" height="40" rx="8"/>
+    <rect class="d-soft" x="388" y="120" width="40" height="40" rx="8"/>
+    <text class="d-c d-tac d-bold d-s" x="368" y="105">1</text>
+    <text class="d-c d-tac d-bold d-s" x="408" y="105">2</text>
+    <text class="d-c d-tac d-bold d-s" x="368" y="145">3</text>
+    <text class="d-c d-tac d-bold d-s" x="408" y="145">4</text>
+  </g>
+  <text class="d-c d-tmut d-xs" x="388" y="68">rank 2</text>
+  <text class="d-c d-bold d-s" x="388" y="186">matrix</text>
+  <text class="d-c d-tmut d-xs" x="388" y="204">a grid (rows × cols)</text>
+
+  <!-- rank 3: 3D tensor (stacked grids) -->
+  <g>
+    <rect class="d-node-2" x="566" y="70" width="80" height="80" rx="9"/>
+    <rect class="d-node-2" x="578" y="82" width="80" height="80" rx="9"/>
+    <rect class="d-fill-accent" x="590" y="94" width="80" height="80" rx="9"/>
+    <line class="d-line" x1="630" y1="94" x2="630" y2="174"/>
+    <line class="d-line" x1="590" y1="134" x2="670" y2="134"/>
+  </g>
+  <text class="d-c d-tmut d-xs" x="630" y="56">rank 3</text>
+  <text class="d-c d-bold d-s" x="630" y="200">3-D tensor</text>
+  <text class="d-c d-tmut d-xs" x="630" y="218">a stack of grids</text>
+</svg>

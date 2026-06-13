@@ -1,0 +1,31 @@
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-ai d-ai">
+  <title id="t-ai">A context vector is a weighted sum</title>
+  <desc id="d-ai">Each input token contributes to the context vector in proportion to its attention weight.</desc>
+  <defs>
+    <marker id="ar-ai" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
+  </defs>
+
+  <g font-size="12.5">
+    <rect class="d-node" x="40" y="30" width="100" height="40" rx="9"/><text class="d-c" x="90" y="55">Your</text><text class="d-c d-tmut d-xs" x="90" y="88">α = 0.14</text>
+    <rect class="d-node" x="160" y="30" width="100" height="40" rx="9"/><text class="d-c" x="210" y="55">journey</text><text class="d-c d-tac d-xs d-bold" x="210" y="88">α = 0.24</text>
+    <rect class="d-node" x="280" y="30" width="100" height="40" rx="9"/><text class="d-c" x="330" y="55">starts</text><text class="d-c d-tmut d-xs" x="330" y="88">α = 0.23</text>
+    <rect class="d-node" x="400" y="30" width="100" height="40" rx="9"/><text class="d-c" x="450" y="55">with</text><text class="d-c d-tmut d-xs" x="450" y="88">α = 0.12</text>
+    <rect class="d-node" x="520" y="30" width="100" height="40" rx="9"/><text class="d-c" x="570" y="55">one</text><text class="d-c d-tmut d-xs" x="570" y="88">α = 0.11</text>
+    <rect class="d-node" x="640" y="30" width="80" height="40" rx="9"/><text class="d-c" x="680" y="55">step</text><text class="d-c d-tmut d-xs" x="680" y="88">α = 0.16</text>
+  </g>
+
+  <line class="d-line" x1="90" y1="98" x2="360" y2="150" marker-end="url(#ar-ai)"/>
+  <line class="d-line" x1="210" y1="98" x2="368" y2="150" marker-end="url(#ar-ai)"/>
+  <line class="d-line" x1="330" y1="98" x2="376" y2="150" marker-end="url(#ar-ai)"/>
+  <line class="d-line" x1="450" y1="98" x2="392" y2="150" marker-end="url(#ar-ai)"/>
+  <line class="d-line" x1="570" y1="98" x2="400" y2="150" marker-end="url(#ar-ai)"/>
+  <line class="d-line" x1="680" y1="98" x2="408" y2="150" marker-end="url(#ar-ai)"/>
+
+  <circle cx="380" cy="166" r="18" class="d-fill-accent"/>
+  <text class="d-c d-tinv d-bold" x="380" y="172" font-size="18">Σ</text>
+  <text class="d-c d-tmut d-xs" x="520" y="164">weighted sum of every token</text>
+
+  <line class="d-line-accent" x1="380" y1="184" x2="380" y2="206" marker-end="url(#ar-ai)"/>
+  <rect class="d-soft" x="306" y="208" width="148" height="36" rx="10"/>
+  <text class="d-c d-tac d-bold" x="380" y="231">context vector z²</text>
+</svg>

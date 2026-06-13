@@ -1,0 +1,43 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-gl d-gl">
+  <title id="t-gl">The autoregressive generation loop</title>
+  <desc id="d-gl">The model turns the context into logits, takes the last token's logits, softmaxes to probabilities, picks the highest with argmax, appends that token, and repeats.</desc>
+  <defs>
+    <marker id="ar-c4gl" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+    <marker id="ar-c4gl-a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <rect class="d-node" x="30" y="70" width="118" height="48" rx="11"/>
+  <text class="d-c d-bold d-s" x="89" y="98">context</text>
+  <text class="d-c d-tmut d-xs" x="89" y="58">"Hello, I am"</text>
+
+  <line class="d-line" x1="148" y1="94" x2="186" y2="94" marker-end="url(#ar-c4gl)"/>
+  <rect class="d-soft" x="188" y="70" width="110" height="48" rx="11"/>
+  <text class="d-c d-tac d-bold d-s" x="243" y="98">GPT → logits</text>
+
+  <line class="d-line" x1="298" y1="94" x2="336" y2="94" marker-end="url(#ar-c4gl)"/>
+  <rect class="d-node" x="338" y="70" width="128" height="48" rx="11"/>
+  <text class="d-c d-bold d-s" x="402" y="91">take last</text>
+  <text class="d-c d-bold d-s" x="402" y="108">token's logits</text>
+
+  <line class="d-line" x1="466" y1="94" x2="504" y2="94" marker-end="url(#ar-c4gl)"/>
+  <rect class="d-node" x="506" y="70" width="110" height="48" rx="11"/>
+  <text class="d-c d-bold d-s" x="561" y="98">softmax</text>
+  <text class="d-c d-tmut d-xs" x="561" y="58">→ probabilities</text>
+
+  <line class="d-line" x1="616" y1="94" x2="654" y2="94" marker-end="url(#ar-c4gl)"/>
+  <rect class="d-fill-accent" x="656" y="70" width="80" height="48" rx="11"/>
+  <text class="d-c d-tinv d-bold d-s" x="696" y="98">argmax</text>
+
+  <!-- down + back: append -->
+  <line class="d-line-accent" x1="696" y1="118" x2="696" y2="180" marker-end="url(#ar-c4gl-a)"/>
+  <rect class="d-soft" x="556" y="182" width="200" height="48" rx="11"/>
+  <text class="d-c d-tac d-bold d-s" x="656" y="203">append token ID</text>
+  <text class="d-c d-tmut d-xs" x="656" y="221">"a"  →  next input</text>
+
+  <!-- loop back arrow to context -->
+  <path class="d-line-accent" d="M556 206 H89 V124" fill="none" marker-end="url(#ar-c4gl-a)"/>
+  <rect class="d-chip" x="300" y="193" width="150" height="26" rx="8"/>
+  <text class="d-c d-tac d-xs d-bold" x="375" y="210">repeat each step</text>
+
+  <text class="d-c d-tmut d-xs" x="380" y="276">After 6 steps: "Hello, I am a model ready to help."  (greedy decoding)</text>
+</svg>

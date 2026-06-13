@@ -1,0 +1,31 @@
+<svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-qkv d-qkv">
+  <title id="t-qkv">Projecting an input into query, key, value</title>
+  <desc id="d-qkv">Three learned weight matrices project each input token into a query, a key, and a value vector.</desc>
+  <defs>
+    <marker id="ar-qkv" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow"/></marker>
+  </defs>
+
+  <rect class="d-node" x="40" y="98" width="110" height="44" rx="11"/>
+  <text class="d-c d-bold" x="95" y="125">input x⁽ⁱ⁾</text>
+
+  <!-- to three matrices -->
+  <line class="d-line" x1="150" y1="116" x2="296" y2="56" marker-end="url(#ar-qkv)"/>
+  <line class="d-line" x1="150" y1="120" x2="296" y2="120" marker-end="url(#ar-qkv)"/>
+  <line class="d-line" x1="150" y1="124" x2="296" y2="184" marker-end="url(#ar-qkv)"/>
+
+  <rect class="d-soft" x="300" y="36" width="92" height="40" rx="10"/><text class="d-c d-tac d-bold d-s" x="346" y="61">× Wq</text>
+  <rect class="d-node" x="300" y="100" width="92" height="40" rx="10"/><text class="d-c d-bold d-s" x="346" y="125">× Wk</text>
+  <rect class="d-node" x="300" y="164" width="92" height="40" rx="10"/><text class="d-c d-bold d-s" x="346" y="189">× Wv</text>
+
+  <line class="d-line" x1="392" y1="56" x2="498" y2="56" marker-end="url(#ar-qkv)"/>
+  <line class="d-line" x1="392" y1="120" x2="498" y2="120" marker-end="url(#ar-qkv)"/>
+  <line class="d-line" x1="392" y1="184" x2="498" y2="184" marker-end="url(#ar-qkv)"/>
+
+  <rect class="d-soft" x="502" y="36" width="150" height="40" rx="10"/><text class="d-c d-tac d-bold" x="577" y="61">query</text>
+  <rect class="d-node" x="502" y="100" width="150" height="40" rx="10"/><text class="d-c d-bold" x="577" y="125">key</text>
+  <rect class="d-node" x="502" y="164" width="150" height="40" rx="10"/><text class="d-c d-bold" x="577" y="189">value</text>
+
+  <text class="d-tmut d-xs" x="668" y="60">what I want</text>
+  <text class="d-tmut d-xs" x="668" y="124">what I offer</text>
+  <text class="d-tmut d-xs" x="668" y="188">my content</text>
+</svg>

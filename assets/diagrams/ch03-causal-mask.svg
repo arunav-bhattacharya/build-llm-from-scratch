@@ -1,0 +1,67 @@
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-cm d-cm">
+  <title id="t-cm">Causal attention mask</title>
+  <desc id="d-cm">The upper triangle of the attention matrix is masked, so each token attends only to itself and earlier tokens.</desc>
+
+  <text class="d-c d-tmut d-xs" x="430" y="42">query token (row) attends to key token (column)</text>
+
+  <!-- column headers 1..6 -->
+  <g font-size="12">
+    <text class="d-c d-tmut" x="337" y="80">1</text>
+    <text class="d-c d-tmut" x="371" y="80">2</text>
+    <text class="d-c d-tmut" x="405" y="80">3</text>
+    <text class="d-c d-tmut" x="439" y="80">4</text>
+    <text class="d-c d-tmut" x="473" y="80">5</text>
+    <text class="d-c d-tmut" x="507" y="80">6</text>
+  </g>
+  <!-- row labels -->
+  <g font-size="12">
+    <text class="d-e" x="312" y="109">Your</text>
+    <text class="d-e" x="312" y="143">journey</text>
+    <text class="d-e" x="312" y="177">starts</text>
+    <text class="d-e" x="312" y="211">with</text>
+    <text class="d-e" x="312" y="245">one</text>
+    <text class="d-e" x="312" y="279">step</text>
+  </g>
+
+  <!-- 6x6 grid: active (c<=r) accent-tinted with value; masked (c>r) grey -->
+  <g font-size="11">
+    <!-- row 0 -->
+    <rect class="d-soft" x="320" y="92" width="34" height="34"/><text class="d-c d-tac" x="337" y="113">1.0</text>
+    <rect class="d-node-2" x="354" y="92" width="34" height="34"/><rect class="d-node-2" x="388" y="92" width="34" height="34"/><rect class="d-node-2" x="422" y="92" width="34" height="34"/><rect class="d-node-2" x="456" y="92" width="34" height="34"/><rect class="d-node-2" x="490" y="92" width="34" height="34"/>
+    <!-- row 1 -->
+    <rect class="d-soft" x="320" y="126" width="34" height="34"/><text class="d-c d-tac" x="337" y="147">.55</text>
+    <rect class="d-soft" x="354" y="126" width="34" height="34"/><text class="d-c d-tac" x="371" y="147">.45</text>
+    <rect class="d-node-2" x="388" y="126" width="34" height="34"/><rect class="d-node-2" x="422" y="126" width="34" height="34"/><rect class="d-node-2" x="456" y="126" width="34" height="34"/><rect class="d-node-2" x="490" y="126" width="34" height="34"/>
+    <!-- row 2 -->
+    <rect class="d-soft" x="320" y="160" width="34" height="34"/><text class="d-c d-tac" x="337" y="181">.38</text>
+    <rect class="d-soft" x="354" y="160" width="34" height="34"/><text class="d-c d-tac" x="371" y="181">.31</text>
+    <rect class="d-soft" x="388" y="160" width="34" height="34"/><text class="d-c d-tac" x="405" y="181">.31</text>
+    <rect class="d-node-2" x="422" y="160" width="34" height="34"/><rect class="d-node-2" x="456" y="160" width="34" height="34"/><rect class="d-node-2" x="490" y="160" width="34" height="34"/>
+    <!-- row 3 -->
+    <rect class="d-soft" x="320" y="194" width="34" height="34"/><text class="d-c d-tac" x="337" y="215">.28</text>
+    <rect class="d-soft" x="354" y="194" width="34" height="34"/><text class="d-c d-tac" x="371" y="215">.25</text>
+    <rect class="d-soft" x="388" y="194" width="34" height="34"/><text class="d-c d-tac" x="405" y="215">.25</text>
+    <rect class="d-soft" x="422" y="194" width="34" height="34"/><text class="d-c d-tac" x="439" y="215">.23</text>
+    <rect class="d-node-2" x="456" y="194" width="34" height="34"/><rect class="d-node-2" x="490" y="194" width="34" height="34"/>
+    <!-- row 4 -->
+    <rect class="d-soft" x="320" y="228" width="34" height="34"/><text class="d-c d-tac" x="337" y="249">.22</text>
+    <rect class="d-soft" x="354" y="228" width="34" height="34"/><text class="d-c d-tac" x="371" y="249">.20</text>
+    <rect class="d-soft" x="388" y="228" width="34" height="34"/><text class="d-c d-tac" x="405" y="249">.20</text>
+    <rect class="d-soft" x="422" y="228" width="34" height="34"/><text class="d-c d-tac" x="439" y="249">.19</text>
+    <rect class="d-soft" x="456" y="228" width="34" height="34"/><text class="d-c d-tac" x="473" y="249">.20</text>
+    <rect class="d-node-2" x="490" y="228" width="34" height="34"/>
+    <!-- row 5 -->
+    <rect class="d-soft" x="320" y="262" width="34" height="34"/><text class="d-c d-tac" x="337" y="283">.19</text>
+    <rect class="d-soft" x="354" y="262" width="34" height="34"/><text class="d-c d-tac" x="371" y="283">.17</text>
+    <rect class="d-soft" x="388" y="262" width="34" height="34"/><text class="d-c d-tac" x="405" y="283">.17</text>
+    <rect class="d-soft" x="422" y="262" width="34" height="34"/><text class="d-c d-tac" x="439" y="283">.15</text>
+    <rect class="d-soft" x="456" y="262" width="34" height="34"/><text class="d-c d-tac" x="473" y="283">.17</text>
+    <rect class="d-soft" x="490" y="262" width="34" height="34"/><text class="d-c d-tac" x="507" y="283">.15</text>
+  </g>
+
+  <rect class="d-node-2" x="556" y="120" width="26" height="26"/><text class="d-s" x="592" y="138">masked (future) → 0</text>
+  <rect class="d-soft" x="556" y="158" width="26" height="26"/><text class="d-s" x="592" y="176">attended (≤ current)</text>
+  <text class="d-tmut d-xs" x="556" y="214">Each row sums to 1.</text>
+
+  <text class="d-c d-tmut d-xs" x="430" y="328">1 Your · 2 journey · 3 starts · 4 with · 5 one · 6 step</text>
+</svg>

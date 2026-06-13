@@ -1,0 +1,24 @@
+<svg viewBox="0 0 760 446" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-amdl d-amdl">
+  <title id="t-amdl">Nested fields of AI</title>
+  <desc id="d-amdl">Artificial intelligence contains machine learning, which contains deep learning, which contains large language models.</desc>
+
+  <rect class="d-panel" x="34" y="30" width="692" height="386" rx="20"/>
+  <rect class="d-node" x="92" y="80" width="576" height="306" rx="17"/>
+  <rect class="d-panel" x="150" y="130" width="460" height="226" rx="14"/>
+  <rect class="d-soft" x="226" y="206" width="308" height="116" rx="13"/>
+
+  <text class="d-c d-bold" x="380" y="55" font-size="15">Artificial intelligence</text>
+  <text class="d-c d-tmut d-xs" x="380" y="71">systems that perform human-like tasks</text>
+
+  <text class="d-c d-bold" x="380" y="105" font-size="15">Machine learning</text>
+  <text class="d-c d-tmut d-xs" x="380" y="121">algorithms that learn rules from data</text>
+
+  <text class="d-c d-bold" x="380" y="155" font-size="15">Deep learning</text>
+  <text class="d-c d-tmut d-xs" x="380" y="171">learning with multi-layer neural networks</text>
+
+  <text class="d-c d-tac d-bold" x="380" y="252" font-size="16.5">Large language models</text>
+  <text class="d-c d-tac d-s" x="380" y="275" opacity=".9">deep networks for human-like text</text>
+
+  <rect class="d-chip" x="248" y="332" width="264" height="30" rx="15"/>
+  <text class="d-c d-tmut d-xs" x="380" y="351">Generative AI · creates new content</text>
+</svg>

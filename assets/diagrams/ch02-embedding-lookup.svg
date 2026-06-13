@@ -1,0 +1,35 @@
+<svg viewBox="0 0 760 286" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-el d-el">
+  <title id="t-el">Embedding layer as a lookup table</title>
+  <desc id="d-el">A token ID indexes a row of the embedding weight matrix to retrieve that token's vector.</desc>
+  <defs>
+    <marker id="ar-el" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" class="d-arrow-accent"/></marker>
+  </defs>
+
+  <text class="d-c d-tmut d-xs" x="92" y="40">token ID</text>
+  <rect class="d-fill-accent" x="52" y="118" width="80" height="48" rx="11"/>
+  <text class="d-c d-tinv d-bold" x="92" y="148" font-size="18">3</text>
+
+  <line class="d-line-accent" x1="132" y1="142" x2="214" y2="142" marker-end="url(#ar-el)"/>
+  <text class="d-c d-tac d-xs d-bold" x="173" y="130">look up</text>
+  <text class="d-c d-tac d-xs d-bold" x="173" y="160">row 3</text>
+
+  <!-- embedding matrix -->
+  <text class="d-c d-tmut d-xs" x="380" y="40">embedding weight matrix (6 × 3)</text>
+  <rect class="d-panel" x="240" y="54" width="280" height="192" rx="12"/>
+  <g font-size="12.5">
+    <text class="d-tmut d-e" x="270" y="80">0</text><text class="d-c" x="400" y="80">0.34   −0.18   −0.17</text>
+    <text class="d-tmut d-e" x="270" y="108">1</text><text class="d-c" x="400" y="108">0.92    1.58    1.30</text>
+    <text class="d-tmut d-e" x="270" y="136">2</text><text class="d-c" x="400" y="136">1.28   −0.20   −0.16</text>
+    <text class="d-tmut d-e" x="270" y="164">3</text>
+    <text class="d-tmut d-e" x="270" y="192">4</text><text class="d-c" x="400" y="192">−1.16    0.33   −0.63</text>
+    <text class="d-tmut d-e" x="270" y="220">5</text><text class="d-c" x="400" y="220">−2.84   −0.78   −1.41</text>
+  </g>
+  <rect class="d-soft" x="284" y="148" width="224" height="30" rx="8"/>
+  <text class="d-c d-bold" x="400" y="168" font-size="12.5">−0.40    0.97   −1.15</text>
+
+  <line class="d-line-accent" x1="520" y1="163" x2="600" y2="163" marker-end="url(#ar-el)"/>
+  <text class="d-c d-tmut d-xs" x="668" y="120">retrieved</text>
+  <text class="d-c d-tmut d-xs" x="668" y="138">embedding</text>
+  <rect class="d-soft" x="606" y="148" width="128" height="30" rx="8"/>
+  <text class="d-c d-bold" x="670" y="168" font-size="11.5">−0.40 0.97 −1.15</text>
+</svg>
