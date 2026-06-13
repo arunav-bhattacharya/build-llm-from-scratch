@@ -151,7 +151,12 @@ async function build() {
     if (section.group === 'home') bodyHtml = bodyHtml.replace('<!--SECTION_GRID-->', sectionGridHtml(sections, meta.categories));
     const out = outPathFor(section);
     const pageUrl = out; // root-relative; search.js prepends window.__BASE__
-    rendered.push({ section, bodyHtml, toc: env.toc, out, frontmatter: parsed.data });
+    const stats = {
+      flashcards: (bodyHtml.match(/class="flashcard"/g) || []).length,
+      quizQuestions: (bodyHtml.match(/class="quiz__q"/g) || []).length,
+      assignments: (bodyHtml.match(/class="assignment"/g) || []).length,
+    };
+    rendered.push({ section, bodyHtml, toc: env.toc, out, stats });
     if (section.group !== 'home') searchDocs = searchDocs.concat(sectionDocs(bodyHtml, section, pageUrl));
   }
 
@@ -163,14 +168,14 @@ async function build() {
   // ---- pass 2: wrap in shell + write ----
   console.log('· writing pages');
   for (let i = 0; i < rendered.length; i++) {
-    const { section, bodyHtml, toc, out } = rendered[i];
+    const { section, bodyHtml, toc, out, stats } = rendered[i];
     const prefix = relPrefix(out);
     let prevNext = null;
     if (section.group !== 'home') {
       const idx = navSections.findIndex((s) => s.slug === section.slug);
       prevNext = { prev: navSections[idx - 1] || null, next: navSections[idx + 1] || null };
     }
-    let html = renderPage({ site: meta, section, sections: navSections, bodyHtml, toc, prefix, prevNext });
+    let html = renderPage({ site: meta, section, sections: navSections, bodyHtml, toc, prefix, prevNext, stats });
     html = resolveLinks(html, prefix); // resolve any @/ links in authored content
     const dest = path.join(DIST, out);
     fs.mkdirSync(path.dirname(dest), { recursive: true });

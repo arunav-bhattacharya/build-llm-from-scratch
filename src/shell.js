@@ -6,7 +6,10 @@ const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</
 
 const LOGO = `<svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--accent-bright)"/><stop offset="1" stop-color="var(--or)"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><g fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".95"><circle cx="11" cy="11" r="1.7" fill="#fff"/><circle cx="11" cy="21" r="1.7" fill="#fff"/><circle cx="21" cy="16" r="1.7" fill="#fff"/><path d="M11 11 21 16M11 21 21 16"/></g></svg>`;
 
-const CLOCK = `<svg class="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>`;
+const CLOCK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>`;
+const ICON_CARDS = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="13" height="13" rx="2"/><path d="M8 8V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3"/></svg>`;
+const ICON_QUIZ = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.8 2.8 0 0 1 5.2 1.4c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.5h.01"/></svg>`;
+const ICON_ASSIGN = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>`;
 
 function kicker(site, section) {
   const cat = (site.categories && site.categories[section.category]) || null;
@@ -16,10 +19,19 @@ function kicker(site, section) {
     `<span class="kicker" data-category="${esc(section.category)}">` +
     (label ? `<span class="kicker__num">${esc(label)}</span>` : '') +
     (stage ? `<span class="kicker__stage">${esc(stage)}</span>` : '') +
-    (section.time ? `<span class="kicker__time">${CLOCK}~${esc(section.time)}</span>` : '') +
-    (section.pages ? `<span class="kicker__pages">pp.&nbsp;${esc(section.pages)}</span>` : '') +
     `</span>`
   );
+}
+
+// A pink meta line at the top of a chapter/appendix: estimated read time plus
+// counts of the practice material on the page.
+function pageStats(section, stats) {
+  const items = [];
+  if (section.time) items.push(`<span class="page-stats__item">${CLOCK}~${esc(section.time)} read</span>`);
+  if (stats && stats.flashcards) items.push(`<span class="page-stats__item">${ICON_CARDS}${stats.flashcards} flashcards</span>`);
+  if (stats && stats.quizQuestions) items.push(`<span class="page-stats__item">${ICON_QUIZ}${stats.quizQuestions} quiz questions</span>`);
+  if (stats && stats.assignments) items.push(`<span class="page-stats__item">${ICON_ASSIGN}${stats.assignments} assignment${stats.assignments > 1 ? 's' : ''}</span>`);
+  return items.length ? `<div class="page-stats">${items.join('')}</div>` : '';
 }
 
 function sidebarNav(sections, current, prefix) {
@@ -117,7 +129,7 @@ const SVG_DEFS =
 // ---- the page document -----------------------------------------------------
 
 function renderPage(opts) {
-  const { site, section, sections, bodyHtml, toc = [], prefix, prevNext, scripts = [] } = opts;
+  const { site, section, sections, bodyHtml, toc = [], prefix, prevNext, scripts = [], stats } = opts;
   const isHome = section.group === 'home';
   const titleText = isHome ? `${site.site.title}` : `${section.title} · ${site.site.shortTitle}`;
   const desc = section.desc || site.site.tagline;
@@ -162,7 +174,7 @@ function renderPage(opts) {
   const pageHead = isHome
     ? ''
     : `<header class="page-head">${kicker(site, section)}<h1 class="page-title">${esc(section.title)}</h1>` +
-      (section.desc ? `<p class="page-lede">${esc(section.desc)}</p>` : '') + `</header>`;
+      (section.desc ? `<p class="page-lede">${esc(section.desc)}</p>` : '') + pageStats(section, stats) + `</header>`;
 
   const article = `<article class="prose">${pageHead}${bodyHtml}${isHome ? '' : pager(prevNext, prefix)}</article>`;
   const rightToc = isHome ? '' : tocHtml(toc, section);
