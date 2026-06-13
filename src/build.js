@@ -84,13 +84,12 @@ function sectionGridHtml(sections, categories) {
     const dir = s.group === 'appendix' ? 'appendices' : 'chapters';
     const url = `${dir}/${s.slug}.html`;
     const badge = s.group === 'appendix' ? s.letter : s.num;
-    const label = s.group === 'appendix' ? `Appendix ${s.letter}` : `Chapter ${s.num}`;
     const stage = (categories[s.category] && categories[s.category].label) || '';
     const time = s.time ? `<span class="sec-card__time">${CLOCK_SVG}~${esc(s.time)}</span>` : '';
     return (
       `<a class="sec-card" href="${url}" data-category="${esc(s.category)}">` +
       `<div class="sec-card__top"><span class="sec-card__badge" data-category="${esc(s.category)}">${esc(badge)}</span>` +
-      `<span class="sec-card__kicker">${esc(label)} · ${esc(stage)}</span></div>` +
+      `<span class="sec-card__kicker">${esc(stage)}</span></div>` +
       `<div class="sec-card__title">${esc(s.title)}</div>` +
       `<div class="sec-card__desc">${esc(s.desc || '')}</div>` +
       `<div class="sec-card__foot">${time}</div></a>`
