@@ -1,5 +1,4 @@
 <section class="hero">
-  <span class="hero__eyebrow">Interactive study companion</span>
   <h1>Build a <span class="grad">Large Language Model</span> — explained from scratch.</h1>
   <p class="hero__lede">A chapter-by-chapter visual companion to Sebastian Raschka's <em>Build a Large Language Model (From Scratch)</em>. Every concept, every line of code, and every diagram — rebuilt for beginners and visual learners, without skipping the hard parts.</p>
   <div class="hero__cta">
