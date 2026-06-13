@@ -131,7 +131,7 @@
 .kicker__num { font-weight: 600; font-size: .82rem; color: var(--cat, var(--accent));
   background: var(--cat-tint, var(--tint)); padding: 4px 11px; border-radius: var(--radius-pill);
   border: 1px solid color-mix(in srgb, var(--cat, var(--accent)) 22%, transparent); }
-.kicker__stage { font-size: .8rem; color: var(--mut); }
+.kicker__stage { font-size: .8rem; font-weight: 550; color: var(--cat, var(--mut)); }
 .ico-clock { width: 13px; height: 13px; flex: none; }
 /* pink meta line under the chapter title: read time + practice-material counts */
 .page-stats { display: flex; flex-wrap: wrap; align-items: center; gap: 9px 20px; margin-top: 16px; color: var(--accent); font-size: .88rem; font-weight: 550; }
