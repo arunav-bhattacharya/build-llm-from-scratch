@@ -76,12 +76,12 @@ input { font: inherit; }
 /* ---- Prose typography ---------------------------------------------------- */
 .prose h2, .prose h3, .prose h4 { scroll-margin-top: calc(var(--topbar-h) + 18px); line-height: 1.28; color: var(--txt-strong); letter-spacing: -.01em; }
 .prose h2 {
-  font-size: 1.62rem; font-weight: 580; margin: 2.6em 0 .7em;
+  font-size: 1.62rem; font-weight: 550; margin: 2.6em 0 .7em;
   padding-bottom: .34em; border-bottom: 1px solid var(--line);
 }
 .prose h2:first-child { margin-top: .3em; }
-.prose h3 { font-size: 1.24rem; font-weight: 560; margin: 2em 0 .55em; }
-.prose h4 { font-size: 1.05rem; font-weight: 580; margin: 1.7em 0 .45em; color: var(--txt); }
+.prose h3 { font-size: 1.24rem; font-weight: 545; margin: 2em 0 .55em; }
+.prose h4 { font-size: 1.05rem; font-weight: 550; margin: 1.7em 0 .45em; color: var(--txt); }
 
 .prose p { margin: 0 0 1.15em; }
 .prose ul, .prose ol { margin: 0 0 1.2em; padding-left: 1.45em; }
@@ -89,7 +89,7 @@ input { font: inherit; }
 .prose li::marker { color: var(--accent); }
 .prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul { margin: .3em 0; }
 
-.prose strong { font-weight: 600; color: var(--txt-strong); }
+.prose strong { font-weight: 560; color: var(--txt-strong); }
 .prose em { font-style: italic; }
 
 .prose mark {
