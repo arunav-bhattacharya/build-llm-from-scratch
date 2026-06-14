@@ -34,9 +34,10 @@ function pageStats(section, stats) {
   return items.length ? `<div class="page-stats">${items.join('')}</div>` : '';
 }
 
-function sidebarNav(sections, current, prefix) {
+function sidebarNav(sections, current, prefix, categories) {
   const item = (s) => {
-    const url = `@/${s.group === 'appendix' ? 'appendices' : 'chapters'}/${s.slug}.html`.replace('@/', prefix);
+    const dir = s.group === 'appendix' ? 'appendices' : 'chapters';
+    const url = `${prefix}${dir}/${s.slug}.html`;
     const badge = s.group === 'appendix' ? s.letter : s.num;
     const active = s.slug === current.slug;
     return (
@@ -45,15 +46,23 @@ function sidebarNav(sections, current, prefix) {
       `<span class="nav__text">${esc(s.title)}</span></a></li>`
     );
   };
-  const chapters = sections.filter((s) => s.group === 'chapter').map(item).join('');
-  const apps = sections.filter((s) => s.group === 'appendix').map(item).join('');
-  const home = `@/index.html`.replace('@/', prefix);
+  // Group by build stage (same colour-coded grouping as the overview page).
+  const order = ['intro', 'build', 'pretrain', 'finetune', 'appendix'];
+  let groups = '';
+  for (const cat of order) {
+    const items = sections.filter((s) => s.category === cat);
+    if (!items.length) continue;
+    const label = cat === 'appendix' ? 'Appendices' : (categories && categories[cat] && categories[cat].label) || cat;
+    groups +=
+      `<p class="nav__group" data-category="${esc(cat)}">${esc(label)}</p>` +
+      `<ul class="nav__list">${items.map(item).join('')}</ul>`;
+  }
+  const home = `${prefix}index.html`;
   return (
     `<nav class="nav" aria-label="Chapters and appendices">` +
     `<a class="nav__home${current.group === 'home' ? ' is-active' : ''}" href="${home}">` +
     `<span class="nav__home-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg></span>Overview</a>` +
-    `<p class="nav__group">Chapters</p><ul class="nav__list">${chapters}</ul>` +
-    `<p class="nav__group">Appendices</p><ul class="nav__list">${apps}</ul>` +
+    groups +
     `</nav>`
   );
 }
@@ -167,7 +176,7 @@ function renderPage(opts) {
     `<div class="sidebar__inner">` +
     `<a class="sidebar__book" href="${brandHome}"><span class="sidebar__book-title">${esc(site.site.book.title)}</span>` +
     `<span class="sidebar__book-by">by ${esc(site.site.book.author)}</span></a>` +
-    sidebarNav(sections, section, prefix) +
+    sidebarNav(sections, section, prefix, site.categories) +
     `</div></aside>` +
     `<button class="sidebar-reopen" type="button" data-nav-toggle aria-label="Open navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>`;
 
