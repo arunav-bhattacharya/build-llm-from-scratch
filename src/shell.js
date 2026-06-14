@@ -165,7 +165,7 @@ function renderPage(opts) {
   const brandHome = `${prefix}index.html`;
   const topbar =
     `<header class="topbar">` +
-    `<div class="topbar__left">${navToggle}` +
+    `<div class="topbar__left">${isHome ? '' : navToggle}` +
     `<a class="brand" href="${brandHome}" aria-label="${esc(site.site.title)} — home">${LOGO}<span class="brand__name">${esc(site.site.shortTitle)}</span></a></div>` +
     `<div class="topbar__center">${searchTrigger}</div>` +
     `<div class="topbar__right">${themeToggle}</div>` +
@@ -187,7 +187,7 @@ function renderPage(opts) {
 
   const article = `<article class="prose">${pageHead}${bodyHtml}${isHome ? '' : pager(prevNext, prefix)}</article>`;
   const rightToc = isHome ? '' : tocHtml(toc, section);
-  const layoutClass = 'layout' + (rightToc ? '' : ' layout--notoc') + (isHome ? ' layout--home' : '');
+  const layoutClass = isHome ? 'layout--home' : 'layout' + (rightToc ? '' : ' layout--notoc');
 
   const footer =
     `<footer class="footer"><div class="footer__inner">` +
@@ -206,7 +206,7 @@ function renderPage(opts) {
     `<a class="skip-link" href="#main">Skip to content</a>` +
     topbar +
     `<div class="${layoutClass}">` +
-    sidebar +
+    (isHome ? '' : sidebar) +
     `<main class="main" id="main">${article}${footer}</main>` +
     rightToc +
     `</div>` +

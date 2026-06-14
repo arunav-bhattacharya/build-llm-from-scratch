@@ -69,6 +69,10 @@ input { font: inherit; }
 }
 [data-sidebar='collapsed'] .prose { max-width: 884px; }
 
+/* Home page: no sidebar — a single centered column. */
+.layout--home { max-width: var(--page-max); margin: 0 auto; }
+.layout--home .prose { max-width: 1040px; }
+
 /* ---- Prose typography ---------------------------------------------------- */
 .prose h2, .prose h3, .prose h4 { scroll-margin-top: calc(var(--topbar-h) + 18px); line-height: 1.28; color: var(--txt-strong); letter-spacing: -.01em; }
 .prose h2 {
