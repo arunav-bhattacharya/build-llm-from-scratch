@@ -44,7 +44,7 @@ function renderFlashcards(cards, env, md) {
   const cardHtml = cards
     .map(
       (c, i) => `
-      <button class="flashcard" type="button" data-flashcard aria-pressed="false" aria-label="Flashcard ${i + 1}, tap to flip">
+      <button class="flashcard${i === 0 ? ' is-current' : ''}" type="button" data-flashcard aria-pressed="false" aria-label="Flashcard ${i + 1} of ${cards.length}, tap to flip">
         <span class="flashcard__inner">
           <span class="flashcard__face flashcard__face--front">
             <span class="flashcard__tag">Question</span>
@@ -60,16 +60,16 @@ function renderFlashcards(cards, env, md) {
     )
     .join('');
 
+  // One card shown at a time; Prev/Next step through the deck (see flashcards.js + components.css).
   return `
   <div class="flashdeck" id="${deckId}" data-flashdeck>
-    <div class="flashdeck__bar">
-      <span class="flashdeck__count"><strong>${cards.length}</strong> flashcard${cards.length === 1 ? '' : 's'}</span>
-      <span class="flashdeck__actions">
-        <button class="chip-btn" type="button" data-deck-shuffle>Shuffle</button>
-        <button class="chip-btn" type="button" data-deck-reset>Reset</button>
-      </span>
+    <div class="flashdeck__stage">${cardHtml}</div>
+    <div class="flashdeck__controls">
+      <button class="flashdeck__nav-btn" type="button" data-deck-prev aria-label="Previous flashcard">← Prev</button>
+      <span class="flashdeck__count"><strong data-deck-pos>1</strong> / ${cards.length}</span>
+      <button class="flashdeck__nav-btn" type="button" data-deck-next aria-label="Next flashcard">Next →</button>
     </div>
-    <div class="flashdeck__grid">${cardHtml}</div>
+    <div class="flashdeck__sub"><button class="chip-btn" type="button" data-deck-shuffle>Shuffle</button></div>
   </div>`;
 }
 

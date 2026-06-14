@@ -1,6 +1,6 @@
 <section class="hero">
   <h1>Build a <span class="grad">Large Language Model</span> — explained from scratch.</h1>
-  <p class="hero__lede">A chapter-by-chapter visual companion to Sebastian Raschka's <em>Build a Large Language Model (From Scratch)</em>. Every concept, every line of code, and every diagram — rebuilt for beginners and visual learners, without skipping the hard parts.</p>
+  <p class="hero__lede">A chapter-by-chapter visual companion to <span class="hl-name">Sebastian Raschka</span>'s <em>Build a Large Language Model (From Scratch)</em>. Every concept, every line of code, and every diagram — rebuilt for beginners and visual learners, without skipping the hard parts.</p>
   <div class="hero__cta">
     <a class="btn btn--primary" href="chapters/ch01-understanding-llms.html">Start with Chapter&nbsp;1 →</a>
     <a class="btn btn--ghost" href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener noreferrer">The book's code ↗</a>

@@ -195,7 +195,7 @@ function renderPage(opts) {
     `<p class="footer__sub">Summaries are original explanations; code examples are adapted from the author's open-source <a href="${esc(site.site.book.repo)}" target="_blank" rel="noopener noreferrer">LLMs-from-scratch</a> repository. Please support the author by buying the book.</p>` +
     `</div></footer>`;
 
-  const scriptTags = ['theme', 'nav', 'code', 'flashcards', 'quiz', 'minisearch', 'search', ...scripts]
+  const scriptTags = ['theme', 'nav', 'code', 'flashcards', 'quiz', 'tabs', 'minisearch', 'search', ...scripts]
     .map((n) => `<script defer src="${prefix}js/${n}.js"></script>`)
     .join('');
   const searchIndex = `<script defer src="${prefix}search-index.js"></script>`;

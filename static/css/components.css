@@ -129,13 +129,19 @@
 
 /* ---- Flashcards ---------------------------------------------------------- */
 .flashdeck { margin: 1.6em 0; }
-.flashdeck__bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
-.flashdeck__count { font-size: .88rem; color: var(--mut); }
-.flashdeck__count strong { color: var(--accent); }
-.flashdeck__actions { display: flex; gap: 7px; }
-.flashdeck__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.flashdeck__stage { position: relative; }
+.flashdeck__controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
+.flashdeck__nav-btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: var(--radius-pill);
+  border: 1px solid var(--line); background: var(--card); color: var(--txt); font-size: .9rem; font-weight: 550; box-shadow: var(--sh-sm);
+  transition: color var(--transition), border-color var(--transition), transform var(--transition); }
+.flashdeck__nav-btn:hover { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); transform: translateY(-1px); }
+.flashdeck__nav-btn:active { transform: translateY(0); }
+.flashdeck__count { font-size: .95rem; color: var(--mut); min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+.flashdeck__count strong { color: var(--accent); font-size: 1.05rem; }
+.flashdeck__sub { text-align: center; margin-top: 12px; }
 
-.flashcard { perspective: 1200px; background: none; border: none; padding: 0; height: 196px; text-align: left; display: block; }
+.flashcard { display: none; perspective: 1200px; background: none; border: none; padding: 0; width: 100%; max-width: 540px; height: 240px; margin: 0 auto; text-align: left; }
+.flashcard.is-current { display: block; }
 .flashcard__inner { display: block; position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.45, .05, .25, 1); }
 .flashcard[aria-pressed='true'] .flashcard__inner { transform: rotateY(180deg); }
 .flashcard__face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
@@ -195,6 +201,18 @@
 .assignment__hints summary { cursor: pointer; color: var(--accent); font-weight: 550; }
 .assignment__hints ul { margin-top: 8px; }
 
+/* ---- Test-your-knowledge tabs ------------------------------------------- */
+.tk-tabs { margin: 1.4em 0; }
+.tk-tabs__bar { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+.tk-tabs__tab { padding: 9px 16px; border: none; background: none; color: var(--mut); font-size: .95rem; font-weight: 550;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer; transition: color var(--transition), border-color var(--transition); }
+.tk-tabs__tab:hover { color: var(--txt); }
+.tk-tabs__tab.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+.tk-tabs__panel { display: none; }
+.tk-tabs__panel.is-active { display: block; animation: tkfade var(--transition); }
+.tk-tabs__panel > :first-child { margin-top: 0; }
+@keyframes tkfade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
 /* ============================================================================
    Landing page
    ========================================================================== */
@@ -204,6 +222,7 @@
 .hero h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.06; color: var(--txt-strong); }
 .hero h1 .grad { background: linear-gradient(115deg, var(--accent-bright), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero__lede { font-size: 1.2rem; color: var(--mut); margin: 20px 0 26px; max-width: 60ch; line-height: 1.6; }
+.hl-name { color: var(--accent); font-weight: 600; }
 .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 14px; margin: 36px 0; }
