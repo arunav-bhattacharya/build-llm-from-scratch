@@ -76,12 +76,12 @@ input { font: inherit; }
 /* ---- Prose typography ---------------------------------------------------- */
 .prose h2, .prose h3, .prose h4 { scroll-margin-top: calc(var(--topbar-h) + 18px); line-height: 1.28; color: var(--txt-strong); letter-spacing: -.01em; }
 .prose h2 {
-  font-size: 1.62rem; font-weight: 620; margin: 2.6em 0 .7em;
+  font-size: 1.62rem; font-weight: 580; margin: 2.6em 0 .7em;
   padding-bottom: .34em; border-bottom: 1px solid var(--line);
 }
 .prose h2:first-child { margin-top: .3em; }
-.prose h3 { font-size: 1.24rem; font-weight: 600; margin: 2em 0 .55em; }
-.prose h4 { font-size: 1.05rem; font-weight: 620; margin: 1.7em 0 .45em; color: var(--txt); }
+.prose h3 { font-size: 1.24rem; font-weight: 560; margin: 2em 0 .55em; }
+.prose h4 { font-size: 1.05rem; font-weight: 580; margin: 1.7em 0 .45em; color: var(--txt); }
 
 .prose p { margin: 0 0 1.15em; }
 .prose ul, .prose ol { margin: 0 0 1.2em; padding-left: 1.45em; }
@@ -89,14 +89,14 @@ input { font: inherit; }
 .prose li::marker { color: var(--accent); }
 .prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul { margin: .3em 0; }
 
-.prose strong { font-weight: 640; color: var(--txt-strong); }
+.prose strong { font-weight: 600; color: var(--txt-strong); }
 .prose em { font-style: italic; }
 
 .prose mark {
   background: linear-gradient(transparent 58%, var(--tint-strong) 58%);
   color: inherit; padding: 0 .08em; border-radius: 2px;
 }
-.prose .accent { color: var(--accent); font-weight: 600; }
+.prose .accent { color: var(--accent); font-weight: 560; }
 
 .prose a.ext-link::after {
   content: ''; display: inline-block; width: .62em; height: .62em; margin-left: .22em;
@@ -130,7 +130,7 @@ input { font: inherit; }
 .table-wrap { overflow-x: auto; margin: 1.4em 0; border-radius: var(--radius-sm); box-shadow: var(--sh-sm); }
 .prose table { width: 100%; border-collapse: collapse; font-size: .94rem; background: var(--card-solid); }
 .prose th, .prose td { padding: .62em .9em; text-align: left; border-bottom: 1px solid var(--line); }
-.prose thead th { background: var(--th); color: var(--txt-strong); font-weight: 600; white-space: nowrap; }
+.prose thead th { background: var(--th); color: var(--txt-strong); font-weight: 560; white-space: nowrap; }
 .prose tbody tr:last-child td { border-bottom: none; }
 .prose tbody tr:hover { background: var(--tint); }
 
