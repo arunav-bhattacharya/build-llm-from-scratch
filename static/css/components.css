@@ -219,7 +219,7 @@
 .hero { padding: 30px 0 8px; }
 .hero__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 550; color: var(--accent);
   background: var(--tint); border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent); padding: 5px 14px; border-radius: var(--radius-pill); margin-bottom: 20px; }
-.hero h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); font-weight: 660; letter-spacing: -.03em; line-height: 1.06; color: var(--txt-strong); }
+.hero h1 { font-size: clamp(2.1rem, 6vw, 3.5rem); font-weight: 620; letter-spacing: -.03em; line-height: 1.06; color: var(--txt-strong); }
 .hero h1 .grad { background: linear-gradient(115deg, var(--accent-bright), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero__lede { font-size: 1.2rem; color: var(--mut); margin: 20px 0 26px; max-width: 60ch; line-height: 1.6; }
 .hl-name { color: var(--accent); font-weight: 560; }
